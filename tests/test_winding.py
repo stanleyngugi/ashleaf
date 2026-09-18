@@ -22,7 +22,7 @@ class WindingTests(unittest.TestCase):
             RelativeConstraint("a", "c", 3, evidence_id="ac"),
         ]
         solution = solve_bfs(edges)
-        self.assertEqual(len(solution.contradictions), 2)
+        self.assertEqual(len(solution.contradictions), 1)
         self.assertLess(score_solution(solution, edges)["satisfied_fraction"], 1.0)
 
     def test_confidence_order_is_deterministic(self):
@@ -37,4 +37,3 @@ class WindingTests(unittest.TestCase):
         solution = solve_bfs([])
         self.assertEqual(solution.component_count, 0)
         self.assertEqual(score_solution(solution, [])['satisfied_fraction'], 1.0)
-

@@ -30,3 +30,11 @@ Add a public-data adapter and compare:
 4. rejection of low-confidence edges;
 5. held-out spiral-fit quality using an external evaluator.
 
+The baseline can already be run on the planted contradiction fixture:
+
+```bash
+PYTHONPATH=src python3 scripts/solve_winding.py \
+  experiments/fixtures/winding_conflict.json --confidence-order
+```
+
+The command exits nonzero when contradictions are present. That behavior is deliberate: a benchmark or pipeline must not report a clean solve while discarding incompatible evidence.

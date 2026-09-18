@@ -71,6 +71,7 @@ def solve_bfs(
 
     labels: dict[str, int] = {}
     contradictions: list[Contradiction] = []
+    reported_edges: set[int] = set()
     components = 0
     for root in sorted(nodes):
         if root in labels:
@@ -87,7 +88,8 @@ def solve_bfs(
                     queue.append(neighbour)
                     continue
                 predicted_delta = labels[neighbour] - labels[current]
-                if predicted_delta != expected_delta:
+                if predicted_delta != expected_delta and id(edge) not in reported_edges:
+                    reported_edges.add(id(edge))
                     contradictions.append(
                         Contradiction(edge, predicted_delta, predicted_delta - expected_delta)
                     )
@@ -121,4 +123,3 @@ def score_solution(
         "weighted_satisfied_fraction": satisfied_weight / total_weight if total_weight else 1.0,
         "contradiction_count": float(len(solution.contradictions)),
     }
-
