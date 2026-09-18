@@ -24,7 +24,7 @@ The July 2026 curated datasets include:
 - `surface-labels`: voxelized recto surface labels paired with volume data;
 - `ink-labels`: binary ink masks plus supervision/validation masks.
 
-The new repository should validate metadata and geometry before using them. Public issue reports have already identified examples where stale bounding boxes can silently drop valid patch vertices and where a `scale` value can cause flattening to request terabytes of memory. These are precisely the kind of high-value, low-glamour defects that can produce a monthly-prize submission.
+The new repository should validate metadata and geometry before using them. Public issue reports have already identified examples where stale bounding boxes can silently drop valid patch vertices and where a `scale` value can cause flattening to request terabytes of memory. Community projects now address several of these individual problems, so our opportunity is to connect their checks into a reproducible cross-tool contract and benchmark layer. These are precisely the kind of high-value, low-glamour defects that can produce a monthly-prize submission.
 
 ## Relevant official links
 
@@ -35,4 +35,3 @@ The new repository should validate metadata and geometry before using them. Publ
 - [Spiral-fitting tutorial](https://scrollprize.org/tutorial_spiral)
 - [Winding-annotation open problem](https://scrollprize.org/open_problems/winding_annotations)
 - [Official `villa` repository](https://github.com/ScrollPrize/villa)
-

@@ -8,7 +8,7 @@ The immediate objective is to make useful, reproducible open-source contribution
 
 Deep experimentation and fast feedback are our competitive advantage. We will maintain several technical tracks in parallel—geometry, winding constraints, surface extraction, ink detection, topology, graph methods, self-supervision, and GPU systems—and promote ideas only when controlled experiments show a real gain.
 
-The first target is a winding-constraint harvesting and quality-control toolkit. It is close to the official open problem, reuses the strongest geometry work from the previous repository, can produce a useful monthly submission before a full end-to-end system exists, and gives us measurable interfaces for later Viterbi, MWS, graph, and neural experiments.
+The first target is a cross-tool geometry reliability and quality-control toolkit, beginning with winding constraints. It supports the official open problem without duplicating existing community annotators and synchronizers, reuses the strongest geometry work from the previous repository, can produce a useful monthly submission before a full end-to-end system exists, and gives us measurable interfaces for later Viterbi, MWS, graph, and neural experiments.
 
 ## Repository map
 

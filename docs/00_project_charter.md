@@ -8,13 +8,14 @@ Help read carbonized Herculaneum scrolls by contributing open, reproducible impr
 
 The current competition rewards open-source contributions, real-data improvements, bug fixes, speedups, documentation, and actionable information—not only a final full-scroll reading system. Therefore our first deliverables should be independently useful and easy for the community to run or verify.
 
-The first project is the **Winding Evidence Lab**:
+The first project is the **Scroll Geometry Reliability Lab**, beginning with a winding-evidence benchmark:
 
 - consume official surface predictions and CT-aligned geometry;
-- harvest candidate winding constraints from fibers, normals, surface patches, and flattened evidence;
-- score confidence and detect contradictions;
+- ingest and validate outputs from existing winding, TIFXYZ, data-audit, and spiral-check tools;
+- harvest or compare candidate winding constraints from fibers, normals, surface patches, and flattened evidence;
+- normalize confidence, coordinate conventions, provenance, and contradictions;
 - provide deterministic exports compatible with the official spiral fitter;
-- include held-out evaluation and a visual QC report.
+- include held-out evaluation, a visual QC report, and human-effort accounting.
 
 ## Research tracks
 
@@ -42,4 +43,3 @@ A result is useful when it improves at least one of:
 - robustness to scan, scroll, or resolution shift;
 - reproducibility and debugging;
 - community usability and documentation.
-

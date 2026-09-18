@@ -15,11 +15,11 @@ The strongest submissions combine at least two: for example, a tool plus a bench
 
 ## Recommended first release
 
-**Winding Evidence Lab v0.1:** a CLI and report generator that checks official spiral-input assets, detects metadata inconsistencies, proposes candidate winding constraints, and exports confidence-ranked constraints with QC overlays.
+**Scroll Geometry Reliability Lab v0.1:** a CLI and report generator that checks official spiral-input assets, consumes existing audit/synchronization outputs, detects metadata and interface inconsistencies, compares candidate winding constraints, and exports a reproducible QC report.
 
 Why this first:
 
-- it directly targets an official open problem;
+- it directly supports an official open problem without duplicating existing annotators or synchronizers;
 - it leverages our old spiral and pitch work without importing the old Kaggle assumptions;
 - it can deliver value before a full scroll is automatically unwrapped;
 - it naturally supports ablations and held-out evaluation;
@@ -54,4 +54,3 @@ Repeat winners on held-out evidence, test for leakage and shortcut behavior, and
 ### Week 4: release
 
 Freeze a small useful contribution, write the report, publish the code, and submit. Archive failures so the next month starts from evidence rather than memory.
-
