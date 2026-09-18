@@ -1,8 +1,12 @@
 {
+  "nodes": {
+    "patch-a": {"p": [100, 100, 100], "confidence": 0.95},
+    "patch-b": {"p": [120, 100, 100], "confidence": 0.90},
+    "patch-c": {"p": [140, 100, 100], "confidence": 0.90}
+  },
   "constraints": [
     {"source": "patch-a", "target": "patch-b", "delta": 1, "confidence": 0.95, "evidence_id": "ab"},
     {"source": "patch-b", "target": "patch-c", "delta": 1, "confidence": 0.90, "evidence_id": "bc"},
     {"source": "patch-a", "target": "patch-c", "delta": 3, "confidence": 0.20, "evidence_id": "ac-low-confidence"}
   ]
 }
-

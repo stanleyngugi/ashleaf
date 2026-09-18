@@ -9,9 +9,11 @@ description = "Experiment-first tooling for Vesuvius Challenge geometry and vali
 requires-python = ">=3.10"
 dependencies = []
 
+[project.optional-dependencies]
+pixels = ["numpy>=1.26", "tifffile>=2024.1"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
-

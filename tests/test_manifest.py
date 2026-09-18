@@ -1,6 +1,6 @@
 import unittest
 
-from scroll_lab.manifest import validate_manifest
+from scroll_lab.manifest import audit_manifest_tifxyz, validate_manifest
 
 
 class ManifestTests(unittest.TestCase):
@@ -29,3 +29,9 @@ class ManifestTests(unittest.TestCase):
     def test_missing_assets_is_reported(self):
         self.assertEqual(validate_manifest({})[0].code, "assets_missing")
 
+    def test_local_tifxyz_asset_is_audited(self):
+        issues = audit_manifest_tifxyz(
+            {"assets": [{"id": "missing-patch", "kind": "tifxyz", "path": "absent"}]},
+            base_dir="/tmp",
+        )
+        self.assertEqual(issues[0].code, "not_directory")

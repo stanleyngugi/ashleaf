@@ -36,7 +36,6 @@ def run_winding_benchmark(
             "component_count": solution.component_count,
             "contradiction_count": len(solution.contradictions),
         },
-        "score": score_solution(solution, constraints),
+        "score": {"scope": "internal_constraint_agreement", **score_solution(solution, constraints)},
         "provenance": environment_fingerprint(repo_root),
     }
-

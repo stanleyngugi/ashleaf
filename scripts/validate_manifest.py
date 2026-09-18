@@ -11,15 +11,21 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from scroll_lab.manifest import load_manifest, validate_manifest  # noqa: E402
+from scroll_lab.manifest import audit_manifest_tifxyz, load_manifest, validate_manifest  # noqa: E402
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("manifest", type=Path)
+    parser.add_argument("--audit-tifxyz", action="store_true", help="inspect local TIFXYZ paths")
+    parser.add_argument("--pixels", action="store_true", help="also scan TIFXYZ coordinate pixels")
     args = parser.parse_args()
     try:
-        issues = validate_manifest(load_manifest(args.manifest))
+        manifest = load_manifest(args.manifest)
+        issues = (
+            audit_manifest_tifxyz(manifest, base_dir=args.manifest.parent, scan_pixels=args.pixels)
+            if args.audit_tifxyz else validate_manifest(manifest)
+        )
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"ERROR manifest: {exc}")
         return 2
@@ -33,4 +39,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

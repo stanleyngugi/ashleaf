@@ -59,3 +59,9 @@ PYTHONPATH=src python3 scripts/run_baseline_benchmark.py \
   experiments/fixtures/winding_conflict.json \
   --confidence-order
 ```
+
+Real-data preflight examples are documented in [`docs/15_tifxyz_audit.md`](docs/15_tifxyz_audit.md) and [`docs/16_omezarr_metadata.md`](docs/16_omezarr_metadata.md). These download only tiny public surface patches or metadata, not full CT volumes.
+
+The [fit-window preflight](docs/19_fit_window_preflight.md) combines patch geometry and winding annotations and has a [real Paris 4 false-negative reproduction](reports/2026-09-18_fit_window_false_negative.md).
+
+For a local check, install the optional pixel dependencies with `python3 -m pip install -e '.[pixels]'`, then run `PYTHONPATH=src python3 -m unittest discover -s tests -q`. The [September release plan](docs/20_september_release_plan.md) separates completed smoke tests from evidence still needed for a strong monthly submission.

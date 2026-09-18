@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any, Mapping
 
 from .contracts import ValidationIssue, validate_bbox, validate_shape, validate_spacing
+from .tifxyz import audit_tifxyz
 
 
 @dataclass(frozen=True)
@@ -51,6 +52,8 @@ def validate_manifest(raw: Mapping[str, Any]) -> list[ValidationIssue]:
     """Validate structure and embedded metadata without opening large assets."""
 
     assets = raw.get("assets")
+    if raw.get("schema_version") not in (None, 1):
+        return [ValidationIssue("schema_version", "only schema_version 1 is supported")]
     if not isinstance(assets, list):
         return [ValidationIssue("assets_missing", "manifest must contain an assets list")]
 
@@ -68,6 +71,8 @@ def validate_manifest(raw: Mapping[str, Any]) -> list[ValidationIssue]:
         if asset.asset_id in seen_ids:
             issues.append(ValidationIssue("duplicate_asset_id", asset.asset_id))
         seen_ids.add(asset.asset_id)
+        if not asset.asset_id or not asset.kind or not asset.path:
+            issues.append(ValidationIssue("empty_asset_field", f"asset {index}: id, kind, and path must be nonempty"))
         if asset.shape is not None:
             issues.extend(_prefix(asset.asset_id, validate_shape(asset.shape)))
         if asset.spacing is not None:
@@ -77,6 +82,27 @@ def validate_manifest(raw: Mapping[str, Any]) -> list[ValidationIssue]:
     return issues
 
 
+def audit_manifest_tifxyz(
+    raw: Mapping[str, Any],
+    *,
+    base_dir: str | Path,
+    scan_pixels: bool = False,
+) -> list[ValidationIssue]:
+    """Check local TIFXYZ assets referenced by a structurally valid manifest."""
+
+    issues = validate_manifest(raw)
+    if issues:
+        return issues
+    for item in raw["assets"]:
+        if item["kind"] != "tifxyz":
+            continue
+        path = Path(item["path"])
+        if not path.is_absolute():
+            path = Path(base_dir) / path
+        audit = audit_tifxyz(path, scan_pixels=scan_pixels)
+        issues.extend(_prefix(item["id"], list(audit.issues)))
+    return issues
+
+
 def _prefix(asset_id: str, issues: list[ValidationIssue]) -> list[ValidationIssue]:
     return [ValidationIssue(issue.code, f"{asset_id}: {issue.message}", issue.severity) for issue in issues]
-
