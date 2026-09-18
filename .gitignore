@@ -1,0 +1,31 @@
+# Generated data and expensive run outputs
+data/
+artifacts/
+checkpoints/
+runs/
+wandb/
+*.zarr/
+*.n5
+*.tif
+*.tiff
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Local environments and secrets
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+
+# Tooling and OS noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
