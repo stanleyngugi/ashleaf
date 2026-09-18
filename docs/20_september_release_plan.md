@@ -25,6 +25,7 @@ The monthly artifact is only one lane. Continue independent, falsifiable experim
 ## Current evidence and constraints
 
 - Implemented: TIFXYZ metadata/pixel audit, OME-Zarr metadata audit, ROI memory planner, point-collection audit, external-benchmark adapter, and fit-window preflight.
+- A one-command pinned public-data smoke check is available at `scripts/run_public_smoke.py`; it asserts the known regression and records a JSON report, but is not a substitute for a broader held-out evaluation.
 - Measured: one known stale-bbox patch yields 50 usable vertices in a window that metadata excludes; a clean control yields none there.
 - Unmeasured: full-pack prevalence, fitter outcome improvement, end-user adoption, and GPU scaling.
 - No full CT chunks or GPU experiments have been run in this phase.

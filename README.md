@@ -64,4 +64,13 @@ Real-data preflight examples are documented in [`docs/15_tifxyz_audit.md`](docs/
 
 The [fit-window preflight](docs/19_fit_window_preflight.md) combines patch geometry and winding annotations and has a [real Paris 4 false-negative reproduction](reports/2026-09-18_fit_window_false_negative.md).
 
-For a local check, install the optional pixel dependencies with `python3 -m pip install -e '.[pixels]'`, then run `PYTHONPATH=src python3 -m unittest discover -s tests -q`. The [September release plan](docs/20_september_release_plan.md) separates completed smoke tests from evidence still needed for a strong monthly submission.
+Set up a fresh Python environment and reproduce the public-data smoke checks with:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -e '.[pixels]'
+.venv/bin/python scripts/run_public_smoke.py
+PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -q
+```
+
+The smoke command downloads only pinned small patches, annotations, and OME-Zarr metadata; it writes a JSON report under the ignored `artifacts/` directory. Use `--no-fetch` to rerun offline. The [September release plan](docs/20_september_release_plan.md) separates completed smoke tests from evidence still needed for a strong monthly submission.
