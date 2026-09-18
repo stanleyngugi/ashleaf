@@ -50,3 +50,12 @@ Build a deterministic audit and benchmark for winding evidence:
 This repository is intentionally not a copy of the former Kaggle project. The old code and documents are reference material; only validated components will be ported.
 
 The current monthly-prize deadline listed by the official site is September 30, 2026. See [`reports/2026-09-18_initial_research.md`](reports/2026-09-18_initial_research.md) for the decision record and [`experiments/registry.csv`](experiments/registry.csv) for the active research queue.
+
+Run the current CPU-only end-to-end fixture with:
+
+```bash
+PYTHONPATH=src python3 scripts/run_baseline_benchmark.py \
+  experiments/manifests/example.json \
+  experiments/fixtures/winding_conflict.json \
+  --confidence-order
+```
