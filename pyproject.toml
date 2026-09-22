@@ -11,6 +11,7 @@ dependencies = []
 
 [project.optional-dependencies]
 pixels = ["numpy>=1.26", "tifffile>=2024.1"]
+benchmark = ["numpy>=1.26", "tifffile>=2024.1", "scipy>=1.13,<2"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

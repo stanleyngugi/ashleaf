@@ -1,6 +1,7 @@
 # Generated data and expensive run outputs
 data/
 artifacts/
+.firecrawl/
 checkpoints/
 runs/
 wandb/
@@ -28,4 +29,3 @@ __pycache__/
 .vscode/
 .DS_Store
 Thumbs.db
-

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch the three small public Paris 4 winding annotation files."""
+"""Fetch the small public Paris 4 winding annotations and umbilicus."""
 
 from __future__ import annotations
 
@@ -13,6 +13,7 @@ HASHES = {
     "same_windings.json": "d9be52c5ebb42853f75f235241cbfd159738f6f34468bcd182523bc91dc91048",
     "relative_windings.json": "a3243511d4eb91387a9b32f4dbff11514b08c3ae36e9b2a2b8222607b4883ac1",
     "abs_winding.json": "4e566731f7cbaf8f5ec843de687b3f72f4a784c40b587ebbaf544550902172c1",
+    "umbilicus.json": "c5f30b0d135c1d333f8170e592079a3d5a636e0071c0dcce560eecebb0ee2602",
 }
 
 

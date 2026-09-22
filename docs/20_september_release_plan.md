@@ -1,8 +1,10 @@
-# September 2026 Progress-Prize Release Plan
+# September 2026 Progress-Prize Release Plan — Superseded Candidate
+
+> **Status update, 2026-09-22:** preserve this document as the original decision record, but do not execute it as the primary release plan. Current ecosystem research found that `tifxyz-repair` already provides a stronger full-corpus implementation: 4,922 verified patches audited, 106 stale bboxes found and repaired, 40,782 unverified patches and 817 segment meshes checked, plus an upstream prevention PR. Our two-patch reproduction remains a useful regression fixture and fitter-input component but no longer demonstrates a significant advantage. The active strategy is documented in [Project Intelligence](21_project_intelligence_2026-09-22.md) and the [September Execution Board](22_september_execution_board.md).
 
 Status: private research repository; **not yet a submitted or public release**. The official [Progress Prize rules](https://scrollprize.org/prizes) list the next deadline as September 30, 2026, 11:59 p.m. Pacific. They favor early release, actual use, measurable real-data improvement, actionable diagnostics, and documentation. The aim is therefore a focused reliability contribution, not a claim that our tiny smoke sample fixes virtual unwrapping.
 
-## Candidate contribution
+## Original candidate contribution
 
 **Spiral-input fit-window preflight**: given a Z interval, TIFXYZ patches, and public winding annotations, show how many patches a cached bbox selects, how many actually have usable vertices, and how many annotation points fall in that window. Flag false negatives before an expensive fit. Include metadata-only and pixel-aware modes, explicit `unknown` status for patches not scanned, and machine-readable JSON.
 

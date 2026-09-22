@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "description": "FB01 full-bounds metadata probe for the nine constraint-gauge Paris 4 meshes, relative-winding annotations, umbilicus, and current packed grad_mag group 4.",
+  "base_dir": "../..",
+  "frames": {
+    "annotation_l2": {
+      "name": "PHercParis4 9.6um working-volume coordinates",
+      "axis_order": ["x", "y", "z"],
+      "voxel_size_um": [9.6, 9.6, 9.6],
+      "origin_um_xyz": [0.0, 0.0, 0.0],
+      "sample_semantics": "voxel_center",
+      "source": "spiral-scroll voxel_size_um=9.6 and constraint-gauge GATE0 A25 L2 frame correction"
+    },
+    "mesh_2p4": {
+      "name": "PHercParis4 verified meshes on volume 20260411134726",
+      "axis_order": ["x", "y", "z"],
+      "voxel_size_um": [2.4, 2.4, 2.4],
+      "origin_um_xyz": [0.0, 0.0, 0.0],
+      "sample_semantics": "voxel_center",
+      "source": "official S3 tifxyz paths ending on-20260411134726-2.4um"
+    },
+    "grad_mag_group4": {
+      "name": "las_008_grad_mag packed source group 4",
+      "axis_order": ["z", "y", "x"],
+      "voxel_size_um": [38.4, 38.4, 38.4],
+      "origin_um_xyz": [0.0, 0.0, 0.0],
+      "sample_semantics": "voxel_center",
+      "source": "respool meta channel las_008_grad_mag.ome.zarr/4; 9.6um working grid with lasagna_scale=4"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "relative-winding-annotations",
+      "frame": "annotation_l2",
+      "pointcollections": ["data/PHercParis4/relative_windings.json"],
+      "evidence": "Measured from pinned public point collections. JSON p fields are xyz; current fitter reverses p to internal zyx."
+    },
+    {
+      "id": "umbilicus",
+      "frame": "annotation_l2",
+      "umbilicus_json": "data/PHercParis4/umbilicus.json",
+      "evidence": "Measured from pinned current public umbilicus control points; frame assignment is still subject to origin/registration verification."
+    },
+    {
+      "id": "benchmark-meshes",
+      "frame": "mesh_2p4",
+      "tifxyz_metadata": [
+        "data/PHercParis4/benchmark_meshes/20230702185753-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20230929220926-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20231005123336-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20231012184424-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20231016151002-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20231022170901-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20231031143852-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20231106155351-on-20260411134726-2.4um.tifxyz/meta.json",
+        "data/PHercParis4/benchmark_meshes/20231221180251-on-20260411134726-2.4um.tifxyz/meta.json"
+      ],
+      "evidence": "Aggregate of nine pinned official S3 meta.json bboxes used by the constraint-gauge mesh arm."
+    },
+    {
+      "id": "grad-mag-group4",
+      "frame": "grad_mag_group4",
+      "array_metadata": "data/PHercParis4/lasagna_inputs/grad_mag_respool_g4_meta.json",
+      "evidence": "Current public packed-store metadata; no channel bricks downloaded."
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "FB01-mesh-field-full-bounds",
+      "a": "benchmark-meshes",
+      "b": "grad-mag-group4",
+      "mode": "bounds3d",
+      "expected_overlap": true
+    },
+    {
+      "id": "FB01-annotations-field-full-bounds",
+      "a": "relative-winding-annotations",
+      "b": "grad-mag-group4",
+      "mode": "bounds3d",
+      "expected_overlap": true
+    },
+    {
+      "id": "FB01-umbilicus-field-full-bounds",
+      "a": "umbilicus",
+      "b": "grad-mag-group4",
+      "mode": "bounds3d",
+      "expected_overlap": true
+    },
+    {
+      "id": "FB01-mesh-annotation-full-bounds",
+      "a": "benchmark-meshes",
+      "b": "relative-winding-annotations",
+      "mode": "bounds3d",
+      "expected_overlap": true
+    }
+  ],
+  "limitations": [
+    "TIFXYZ bboxes are metadata; this run does not reread the coordinate TIFFs, although the benchmark and tifxyz-repair report these finished meshes clean.",
+    "The packed grad_mag shape describes allocated array support, not which bricks or voxels contain nonzero winding density.",
+    "The group-4 38.4um frame is derived from 9.6um working voxels times lasagna_scale=4 and still requires parity against the original E1 annotated run.",
+    "All origins and axis directions are provisionally aligned at zero; volume registration must be confirmed before declaring ray coverage.",
+    "Aggregate bounding-box intersection does not imply every pair or seven-ray offset lies within nonzero field support."
+  ]
+}

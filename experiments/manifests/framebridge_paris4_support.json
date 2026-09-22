@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "description": "FB00 z-support probe: reproduce the old false no-overlap conclusion and test the A25 2.4um-to-9.6um correction without reading CT/Zarr chunks.",
+  "base_dir": "../..",
+  "frames": {
+    "paris4_annotation_l2": {
+      "name": "PHercParis4 annotation/L2 field coordinates",
+      "axis_order": ["x", "y", "z"],
+      "voxel_size_um": [9.6, 9.6, 9.6],
+      "origin_um_xyz": [0.0, 0.0, 0.0],
+      "sample_semantics": "voxel_center",
+      "source": "constraint-gauge GATE0 A25; coordinates are L2 of the 2.4um rescan"
+    },
+    "paris4_mesh_2p4": {
+      "name": "PHercParis4 verified-mesh 2.4um coordinates",
+      "axis_order": ["x", "y", "z"],
+      "voxel_size_um": [2.4, 2.4, 2.4],
+      "origin_um_xyz": [0.0, 0.0, 0.0],
+      "sample_semantics": "voxel_center",
+      "source": "verified GP meshes registered on the 2.4um Paris 4 volume; constraint-gauge GATE0 A25"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "relative-winding-annotations",
+      "frame": "paris4_annotation_l2",
+      "pointcollections": ["data/PHercParis4/relative_windings.json"],
+      "evidence": "Bounds measured from the pinned public point-collection file in this workspace."
+    },
+    {
+      "id": "verified-mesh-band-correct-frame",
+      "frame": "paris4_mesh_2p4",
+      "axis_intervals": {"z": [29420.0, 73889.0]},
+      "evidence": "Declared aggregate mesh z band from constraint-gauge GATE0 A17/A25; per-mesh files are not present locally yet."
+    },
+    {
+      "id": "verified-mesh-band-wrong-frame-control",
+      "frame": "paris4_annotation_l2",
+      "axis_intervals": {"z": [29420.0, 73889.0]},
+      "evidence": "Deliberately wrong control: interprets 2.4um mesh indices as 9.6um annotation indices, reproducing the historical frame mistake."
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "FB00-wrong-frame-control",
+      "a": "verified-mesh-band-wrong-frame-control",
+      "b": "relative-winding-annotations",
+      "axis": "z",
+      "expected_overlap": false
+    },
+    {
+      "id": "FB00-corrected-2p4-to-9p6",
+      "a": "verified-mesh-band-correct-frame",
+      "b": "relative-winding-annotations",
+      "axis": "z",
+      "expected_overlap": true
+    }
+  ],
+  "limitations": [
+    "This is a z-support probe, not proof that any complete E1 ray is inside the grad_mag array.",
+    "The aggregate mesh z interval is transcribed from constraint-gauge A25 and is not yet remeasured from local mesh TIFFs.",
+    "Origins are provisionally zero; an affine/registration check is required before sampling field values.",
+    "Only relative_windings.json is measured here; other point-collection families may have different support."
+  ]
+}

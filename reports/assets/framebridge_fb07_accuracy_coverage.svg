@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:25px;font-weight:700}.sub{font-size:14px;fill:#526071}.axis{font-size:14px}.tick{font-size:12px;fill:#526071}.legend{font-size:13px}</style>
+<text class="title" x="105" y="39">FrameBridge FB07: accuracy–coverage transfer</text>
+<text class="sub" x="105" y="65">Four leave-one-segment-out rotations · macro exact accuracy · internal post-FB06 cross-validation</text>
+<line x1="105" y1="530.0" x2="945" y2="530.0" stroke="#d9dee8" stroke-width="1"/>
+<text class="tick" x="91" y="534.0" text-anchor="end">0.4</text>
+<line x1="105" y1="457.5" x2="945" y2="457.5" stroke="#d9dee8" stroke-width="1"/>
+<text class="tick" x="91" y="461.5" text-anchor="end">0.5</text>
+<line x1="105" y1="385.0" x2="945" y2="385.0" stroke="#d9dee8" stroke-width="1"/>
+<text class="tick" x="91" y="389.0" text-anchor="end">0.6</text>
+<line x1="105" y1="312.5" x2="945" y2="312.5" stroke="#d9dee8" stroke-width="1"/>
+<text class="tick" x="91" y="316.5" text-anchor="end">0.7</text>
+<line x1="105" y1="240.0" x2="945" y2="240.0" stroke="#d9dee8" stroke-width="1"/>
+<text class="tick" x="91" y="244.0" text-anchor="end">0.8</text>
+<line x1="105" y1="167.5" x2="945" y2="167.5" stroke="#d9dee8" stroke-width="1"/>
+<text class="tick" x="91" y="171.5" text-anchor="end">0.9</text>
+<line x1="105" y1="95.0" x2="945" y2="95.0" stroke="#d9dee8" stroke-width="1"/>
+<text class="tick" x="91" y="99.0" text-anchor="end">1.0</text>
+<line x1="105.0" y1="95" x2="105.0" y2="530" stroke="#eef1f5" stroke-width="1"/>
+<text class="tick" x="105.0" y="555" text-anchor="middle">10%</text>
+<line x1="198.3" y1="95" x2="198.3" y2="530" stroke="#eef1f5" stroke-width="1"/>
+<text class="tick" x="198.3" y="555" text-anchor="middle">20%</text>
+<line x1="291.7" y1="95" x2="291.7" y2="530" stroke="#eef1f5" stroke-width="1"/>
+<text class="tick" x="291.7" y="555" text-anchor="middle">30%</text>
+<line x1="478.3" y1="95" x2="478.3" y2="530" stroke="#eef1f5" stroke-width="1"/>
+<text class="tick" x="478.3" y="555" text-anchor="middle">50%</text>
+<line x1="665.0" y1="95" x2="665.0" y2="530" stroke="#eef1f5" stroke-width="1"/>
+<text class="tick" x="665.0" y="555" text-anchor="middle">70%</text>
+<line x1="945.0" y1="95" x2="945.0" y2="530" stroke="#eef1f5" stroke-width="1"/>
+<text class="tick" x="945.0" y="555" text-anchor="middle">100%</text>
+<line x1="105" y1="530" x2="945" y2="530" stroke="#172033" stroke-width="1.5"/>
+<line x1="105" y1="95" x2="105" y2="530" stroke="#172033" stroke-width="1.5"/>
+<text class="axis" x="525.0" y="594" text-anchor="middle">Selected coverage</text>
+<text class="axis" transform="translate(27 312.5) rotate(-90)" text-anchor="middle">Macro exact dw=1 accuracy</text>
+<polyline points="105.0,147.2 198.3,149.9 291.7,160.9 478.3,184.8 665.0,209.8 945.0,245.9" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="105.0" cy="147.2" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="198.3" cy="149.9" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="291.7" cy="160.9" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="478.3" cy="184.8" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="665.0" cy="209.8" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="945.0" cy="245.9" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<polyline points="105.0,351.4 198.3,274.3 291.7,248.0 478.3,228.9 665.0,224.5 945.0,245.9" fill="none" stroke="#dc2626" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="105.0" cy="351.4" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="198.3" cy="274.3" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="291.7" cy="248.0" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="478.3" cy="228.9" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="665.0" cy="224.5" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="945.0" cy="245.9" r="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+<polyline points="105.0,139.4 198.3,148.4 291.7,158.2 478.3,182.8 665.0,206.3 945.0,245.9" fill="none" stroke="#15803d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="105.0" cy="139.4" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="198.3" cy="148.4" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="291.7" cy="158.2" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="478.3" cy="182.8" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="665.0" cy="206.3" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="945.0" cy="245.9" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<rect x="550" y="93" width="315" height="92" rx="7" fill="#ffffff" stroke="#cbd3df"/>
+<line x1="565" y1="118" x2="593" y2="118" stroke="#2563eb" stroke-width="3"/>
+<text class="legend" x="603" y="122">Distance only</text>
+<line x1="565" y1="143" x2="593" y2="143" stroke="#dc2626" stroke-width="3"/>
+<text class="legend" x="603" y="147">Native E1 confidence</text>
+<line x1="565" y1="168" x2="593" y2="168" stroke="#15803d" stroke-width="3"/>
+<text class="legend" x="603" y="172">Geometry logistic</text>
+<text class="sub" x="105" y="615">Full-coverage convergence is expected: ranking changes selection, not the frozen E1 predictions.</text>
+</svg>

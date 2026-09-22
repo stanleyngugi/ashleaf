@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "experiment": "FB06",
+  "subject": "E1/local-correspondence/frozen-eight-mesh-replication",
+  "primary_claim_population": "eight meshes not used to formulate FB05 protocol",
+  "pilot_id_excluded_from_primary": "20231022170901",
+  "publishable_as_headline": false,
+  "umbilicus_sha256": "c5f30b0d135c1d333f8170e592079a3d5a636e0071c0dcce560eecebb0ee2602",
+  "estimator": {
+    "k": 2.773,
+    "orient": 1,
+    "frozen": true,
+    "source": "winding-ruler concordance v1_5",
+    "pairs": 20000,
+    "answered": 20000,
+    "umbilicus_control_points": 146,
+    "zero_radial_sign": 0,
+    "valid_ray_histogram": {
+      "7": 20000
+    }
+  },
+  "frozen_protocol": {
+    "stride_v": 10,
+    "stride_u": 10,
+    "trim_wraps": 1,
+    "max_pairs_per_mesh": 20000,
+    "seed": 1
+  },
+  "primary_replication": {
+    "replication_meshes": 3,
+    "ineligible_replication_meshes": 5,
+    "replication_pairs": 46318,
+    "pooled_exact_signed_dw1": 0.7098320307439873,
+    "pooled_exact_absolute_dw1": 0.7098320307439873,
+    "pooled_mae": 0.5084416425579689,
+    "pooled_positive_sign_fraction": 0.9762943132259597,
+    "macro_exact_signed_dw1": {
+      "mean": 0.7479561417298148,
+      "median": 0.8672,
+      "minimum": 0.4559687934166934,
+      "maximum": 0.9206996317727512
+    },
+    "macro_mae": {
+      "mean": 0.434796298877362,
+      "median": 0.1547,
+      "minimum": 0.09534455549710678,
+      "maximum": 1.054344341134979
+    },
+    "macro_coverage": {
+      "mean": 1.0,
+      "median": 1.0,
+      "minimum": 1.0,
+      "maximum": 1.0
+    },
+    "pooled_prediction_histogram": {
+      "0": 1098,
+      "1": 32878,
+      "2": 6961,
+      "3": 2596,
+      "4": 1507,
+      "5": 846,
+      "6": 313,
+      "7": 67,
+      "8": 21,
+      "9": 8,
+      "10": 14,
+      "11": 9
+    }
+  },
+  "meshes": {
+    "20230702185753": {
+      "role": "frozen_replication",
+      "status": "ineligible_frozen_protocol",
+      "reason": "only 2 wraps; no retained adjacent pair after trim"
+    },
+    "20230929220926": {
+      "role": "frozen_replication",
+      "status": "ineligible_frozen_protocol",
+      "reason": "only 2 wraps; no retained adjacent pair after trim"
+    },
+    "20231005123336": {
+      "n_pairs_gt": 18714,
+      "n_scorable": 18714,
+      "M4_coverage": 1.0,
+      "n_dw1": 18714,
+      "M1_exact_dw1": 0.4559687934166934,
+      "M2_mae": 1.054344341134979,
+      "M3_ece_rank": 0.1844474731943837,
+      "M3_bins": [
+        {
+          "bin": 0,
+          "n": 1872,
+          "conf_mean": 0.06489599705194471,
+          "acc": 0.2702991452991453
+        },
+        {
+          "bin": 1,
+          "n": 1871,
+          "conf_mean": 0.1919183012120884,
+          "acc": 0.3212185996793159
+        },
+        {
+          "bin": 2,
+          "n": 1871,
+          "conf_mean": 0.31390688124990274,
+          "acc": 0.4061998931052913
+        },
+        {
+          "bin": 3,
+          "n": 1872,
+          "conf_mean": 0.42102269950672155,
+          "acc": 0.4412393162393162
+        },
+        {
+          "bin": 4,
+          "n": 1871,
+          "conf_mean": 0.5187504984250152,
+          "acc": 0.51309460181721
+        },
+        {
+          "bin": 5,
+          "n": 1871,
+          "conf_mean": 0.6115214585714763,
+          "acc": 0.5285943345804383
+        },
+        {
+          "bin": 6,
+          "n": 1872,
+          "conf_mean": 0.7001270470125942,
+          "acc": 0.5245726495726496
+        },
+        {
+          "bin": 7,
+          "n": 1871,
+          "conf_mean": 0.7895239334095845,
+          "acc": 0.5430251202565473
+        },
+        {
+          "bin": 8,
+          "n": 1871,
+          "conf_mean": 0.8806484697040202,
+          "acc": 0.547300908605024
+        },
+        {
+          "bin": 9,
+          "n": 1872,
+          "conf_mean": 0.9693455886744032,
+          "acc": 0.4642094017094017
+        }
+      ],
+      "subject_kind": "pairwise",
+      "role": "frozen_replication",
+      "status": "eligible",
+      "pair_cache_sha256": "b25220c52be128bece7832245d6af813b66b27d47b2d232350c7ee1888d7cbc2",
+      "pair_protocol": {
+        "protocol": "adjacent-wrap same-row nearest correspondence",
+        "transposed_arc_axis": false,
+        "reference_row": 1296,
+        "row_wrap_counts": [
+          4,
+          4,
+          4,
+          4,
+          3
+        ],
+        "n_wraps": 4,
+        "trimmed": 1,
+        "stride_v": 10,
+        "stride_u": 10,
+        "candidate_pairs_before_dedup_cap": 18714,
+        "unique_pairs_before_cap": 18714,
+        "pairs_after_cap_and_orientation": 18714,
+        "orientation_swaps": 16810,
+        "equal_radius_rejections": 0,
+        "wrap_histogram": {
+          "1": 18714
+        },
+        "working_distance_percentiles": {
+          "p0": 6.455741241144232,
+          "p25": 22.228070860651503,
+          "p50": 33.960315413047894,
+          "p75": 49.115745626105756,
+          "p90": 60.42927205893242,
+          "p99": 85.700284607058,
+          "p100": 360.72416891042866
+        },
+        "angular_separation_degrees_percentiles": {
+          "p0": 4.533763848391542e-05,
+          "p25": 0.2043241901636064,
+          "p50": 0.42873071490136117,
+          "p75": 0.7402318615708326,
+          "p90": 1.1330728977001865,
+          "p99": 2.342483368224138,
+          "p100": 21.64272583540793
+        },
+        "raw_mesh_gap_voxels_percentiles": {
+          "p0": 25.82296496457693,
+          "p25": 88.91228344260601,
+          "p50": 135.84126165219158,
+          "p75": 196.46298250442302,
+          "p90": 241.71708823572968,
+          "p99": 342.801138428232,
+          "p100": 1442.8966756417146
+        }
+      },
+      "exact_absolute_dw1": 0.4559687934166934,
+      "positive_sign_fraction": 0.9807096291546435,
+      "prediction_histogram": {
+        "0": 361,
+        "1": 8533,
+        "2": 4761,
+        "3": 2387,
+        "4": 1450,
+        "5": 825,
+        "6": 300,
+        "7": 55,
+        "8": 13,
+        "9": 6,
+        "10": 14,
+        "11": 9
+      }
+    },
+    "20231012184424": {
+      "n_pairs_gt": 20000,
+      "n_scorable": 20000,
+      "M4_coverage": 1.0,
+      "n_dw1": 20000,
+      "M1_exact_dw1": 0.8672,
+      "M2_mae": 0.1547,
+      "M3_ece_rank": 0.40060450022501126,
+      "M3_bins": [
+        {
+          "bin": 0,
+          "n": 2000,
+          "conf_mean": 0.13005333121871038,
+          "acc": 0.6195
+        },
+        {
+          "bin": 1,
+          "n": 2000,
+          "conf_mean": 0.3258800559456491,
+          "acc": 0.8235
+        },
+        {
+          "bin": 2,
+          "n": 2000,
+          "conf_mean": 0.43993489264043445,
+          "acc": 0.8915
+        },
+        {
+          "bin": 3,
+          "n": 2000,
+          "conf_mean": 0.5297812058339492,
+          "acc": 0.911
+        },
+        {
+          "bin": 4,
+          "n": 2000,
+          "conf_mean": 0.6046983177929751,
+          "acc": 0.9255
+        },
+        {
+          "bin": 5,
+          "n": 2000,
+          "conf_mean": 0.6777183891985102,
+          "acc": 0.931
+        },
+        {
+          "bin": 6,
+          "n": 2000,
+          "conf_mean": 0.7492882515018869,
+          "acc": 0.919
+        },
+        {
+          "bin": 7,
+          "n": 2000,
+          "conf_mean": 0.8239994316081379,
+          "acc": 0.939
+        },
+        {
+          "bin": 8,
+          "n": 2000,
+          "conf_mean": 0.8985456903978533,
+          "acc": 0.929
+        },
+        {
+          "bin": 9,
+          "n": 2000,
+          "conf_mean": 0.9730233600623014,
+          "acc": 0.783
+        }
+      ],
+      "subject_kind": "pairwise",
+      "role": "frozen_replication",
+      "status": "eligible",
+      "pair_cache_sha256": "cbcd538a8e212ff1834acdc47b373e123a9ccf61a94d43268a39a8f9aa7f7c03",
+      "pair_protocol": {
+        "protocol": "adjacent-wrap same-row nearest correspondence",
+        "transposed_arc_axis": false,
+        "reference_row": 1279,
+        "row_wrap_counts": [
+          3,
+          4,
+          4,
+          4,
+          3
+        ],
+        "n_wraps": 4,
+        "trimmed": 1,
+        "stride_v": 10,
+        "stride_u": 10,
+        "candidate_pairs_before_dedup_cap": 21767,
+        "unique_pairs_before_cap": 21767,
+        "pairs_after_cap_and_orientation": 20000,
+        "orientation_swaps": 19929,
+        "equal_radius_rejections": 0,
+        "wrap_histogram": {
+          "1": 20000
+        },
+        "working_distance_percentiles": {
+          "p0": 5.186062280361113,
+          "p25": 15.176665892715848,
+          "p50": 20.903305933561633,
+          "p75": 28.237322519212295,
+          "p90": 36.7140567798103,
+          "p99": 61.40161533974373,
+          "p100": 99.79822025643632
+        },
+        "angular_separation_degrees_percentiles": {
+          "p0": 0.00021779510896758207,
+          "p25": 0.29642392921198113,
+          "p50": 0.5754053077233237,
+          "p75": 0.8934555084176719,
+          "p90": 1.2749765348379385,
+          "p99": 2.333578795328212,
+          "p100": 7.558109083796093
+        },
+        "raw_mesh_gap_voxels_percentiles": {
+          "p0": 20.74424912144445,
+          "p25": 60.70666357086339,
+          "p50": 83.61322373424653,
+          "p75": 112.94929007684918,
+          "p90": 146.8562271192412,
+          "p99": 245.6064613589749,
+          "p100": 399.1928810257453
+        }
+      },
+      "exact_absolute_dw1": 0.8672,
+      "positive_sign_fraction": 0.9782,
+      "prediction_histogram": {
+        "0": 436,
+        "1": 17344,
+        "2": 1967,
+        "3": 170,
+        "4": 42,
+        "5": 12,
+        "6": 9,
+        "7": 10,
+        "8": 8,
+        "9": 2
+      }
+    },
+    "20231016151002": {
+      "n_pairs_gt": 7604,
+      "n_scorable": 7604,
+      "M4_coverage": 1.0,
+      "n_dw1": 7604,
+      "M1_exact_dw1": 0.9206996317727512,
+      "M2_mae": 0.09534455549710678,
+      "M3_ece_rank": 0.47513545865605944,
+      "M3_bins": [
+        {
+          "bin": 0,
+          "n": 761,
+          "conf_mean": 0.16624423859858664,
+          "acc": 0.7871222076215506
+        },
+        {
+          "bin": 1,
+          "n": 760,
+          "conf_mean": 0.3426306911119322,
+          "acc": 0.9407894736842105
+        },
+        {
+          "bin": 2,
+          "n": 760,
+          "conf_mean": 0.43943741836980454,
+          "acc": 0.9539473684210527
+        },
+        {
+          "bin": 3,
+          "n": 761,
+          "conf_mean": 0.5165001111810634,
+          "acc": 0.9632063074901446
+        },
+        {
+          "bin": 4,
+          "n": 760,
+          "conf_mean": 0.5897913513497488,
+          "acc": 0.968421052631579
+        },
+        {
+          "bin": 5,
+          "n": 760,
+          "conf_mean": 0.6583963939466451,
+          "acc": 0.9842105263157894
+        },
+        {
+          "bin": 6,
+          "n": 761,
+          "conf_mean": 0.7311848230228908,
+          "acc": 0.9789750328515112
+        },
+        {
+          "bin": 7,
+          "n": 760,
+          "conf_mean": 0.8065888514903404,
+          "acc": 0.9776315789473684
+        },
+        {
+          "bin": 8,
+          "n": 760,
+          "conf_mean": 0.8929087467837558,
+          "acc": 0.975
+        },
+        {
+          "bin": 9,
+          "n": 761,
+          "conf_mean": 0.9786497011266593,
+          "acc": 0.6780551905387647
+        }
+      ],
+      "subject_kind": "pairwise",
+      "role": "frozen_replication",
+      "status": "eligible",
+      "pair_cache_sha256": "ed93ae1951e4a87c09d10f027c9c90f9a7932e399715f74858201ef3b34a407e",
+      "pair_protocol": {
+        "protocol": "adjacent-wrap same-row nearest correspondence",
+        "transposed_arc_axis": false,
+        "reference_row": 805,
+        "row_wrap_counts": [
+          4,
+          4,
+          4,
+          5,
+          4
+        ],
+        "n_wraps": 4,
+        "trimmed": 1,
+        "stride_v": 10,
+        "stride_u": 10,
+        "candidate_pairs_before_dedup_cap": 7604,
+        "unique_pairs_before_cap": 7604,
+        "pairs_after_cap_and_orientation": 7604,
+        "orientation_swaps": 7603,
+        "equal_radius_rejections": 0,
+        "wrap_histogram": {
+          "1": 7604
+        },
+        "working_distance_percentiles": {
+          "p0": 3.3957637046431257,
+          "p25": 14.825450652303324,
+          "p50": 18.80382523378956,
+          "p75": 23.976024962255927,
+          "p90": 30.534146157268083,
+          "p99": 50.12542670176656,
+          "p100": 101.92054046623845
+        },
+        "angular_separation_degrees_percentiles": {
+          "p0": 6.593075652068765e-05,
+          "p25": 0.376711829309005,
+          "p50": 0.7535835962305387,
+          "p75": 1.2047131937361422,
+          "p90": 1.7071457211354155,
+          "p99": 3.228918251052318,
+          "p100": 9.439318333585968
+        },
+        "raw_mesh_gap_voxels_percentiles": {
+          "p0": 13.583054818572503,
+          "p25": 59.3018026092133,
+          "p50": 75.21530093515824,
+          "p75": 95.90409984902371,
+          "p90": 122.13658462907233,
+          "p99": 200.50170680706623,
+          "p100": 407.6821618649538
+        }
+      },
+      "exact_absolute_dw1": 0.9206996317727512,
+      "positive_sign_fraction": 0.9604155707522357,
+      "prediction_histogram": {
+        "0": 301,
+        "1": 7001,
+        "2": 233,
+        "3": 39,
+        "4": 15,
+        "5": 9,
+        "6": 4,
+        "7": 2
+      }
+    },
+    "20231022170901": {
+      "n_pairs_gt": 20000,
+      "n_scorable": 20000,
+      "M4_coverage": 1.0,
+      "n_dw1": 20000,
+      "M1_exact_dw1": 0.92385,
+      "M2_mae": 0.0794,
+      "M3_ece_rank": 0.48185450022501136,
+      "M3_bins": [
+        {
+          "bin": 0,
+          "n": 2000,
+          "conf_mean": 0.14123224422025504,
+          "acc": 0.764
+        },
+        {
+          "bin": 1,
+          "n": 2000,
+          "conf_mean": 0.31778045396580784,
+          "acc": 0.9345
+        },
+        {
+          "bin": 2,
+          "n": 2000,
+          "conf_mean": 0.4246322568360825,
+          "acc": 0.967
+        },
+        {
+          "bin": 3,
+          "n": 2000,
+          "conf_mean": 0.5062268155888001,
+          "acc": 0.9835
+        },
+        {
+          "bin": 4,
+          "n": 2000,
+          "conf_mean": 0.5796823280021026,
+          "acc": 0.9845
+        },
+        {
+          "bin": 5,
+          "n": 2000,
+          "conf_mean": 0.653642114128235,
+          "acc": 0.9845
+        },
+        {
+          "bin": 6,
+          "n": 2000,
+          "conf_mean": 0.7304385652783342,
+          "acc": 0.989
+        },
+        {
+          "bin": 7,
+          "n": 2000,
+          "conf_mean": 0.8116304036400105,
+          "acc": 0.986
+        },
+        {
+          "bin": 8,
+          "n": 2000,
+          "conf_mean": 0.8958059590687362,
+          "acc": 0.9855
+        },
+        {
+          "bin": 9,
+          "n": 2000,
+          "conf_mean": 0.9786215480569983,
+          "acc": 0.66
+        }
+      ],
+      "subject_kind": "pairwise",
+      "role": "development_pilot",
+      "status": "eligible",
+      "pair_cache_sha256": "3e266b4e4d4a2561ca4c3bc0397da9d5da3158cb4bf2235a5091e847bf32c243",
+      "pair_protocol": {
+        "protocol": "adjacent-wrap same-row nearest correspondence",
+        "transposed_arc_axis": false,
+        "reference_row": 298,
+        "row_wrap_counts": [
+          7,
+          8,
+          8,
+          8,
+          7
+        ],
+        "n_wraps": 8,
+        "trimmed": 1,
+        "stride_v": 10,
+        "stride_u": 10,
+        "candidate_pairs_before_dedup_cap": 35108,
+        "unique_pairs_before_cap": 35108,
+        "pairs_after_cap_and_orientation": 20000,
+        "orientation_swaps": 19981,
+        "equal_radius_rejections": 0,
+        "wrap_histogram": {
+          "1": 4310,
+          "2": 4112,
+          "3": 4010,
+          "4": 3874,
+          "5": 3694
+        },
+        "working_distance_percentiles": {
+          "p0": 3.962222430739151,
+          "p25": 14.82789483150355,
+          "p50": 19.008431417848364,
+          "p75": 24.680176909307598,
+          "p90": 31.270460895451933,
+          "p99": 49.317179393080515,
+          "p100": 195.19788732870634
+        },
+        "angular_separation_degrees_percentiles": {
+          "p0": 6.2400017721329685e-06,
+          "p25": 0.1864427579911859,
+          "p50": 0.39553491552132414,
+          "p75": 0.6771405320333773,
+          "p90": 1.0095328808902397,
+          "p99": 2.0256002960160324,
+          "p100": 9.194905399917388
+        },
+        "raw_mesh_gap_voxels_percentiles": {
+          "p0": 15.848889722956605,
+          "p25": 59.3115793260142,
+          "p50": 76.03372567139346,
+          "p75": 98.72070763723039,
+          "p90": 125.08184358180773,
+          "p99": 197.26871757232206,
+          "p100": 780.7915493148254
+        }
+      },
+      "exact_absolute_dw1": 0.92385,
+      "positive_sign_fraction": 0.95185,
+      "prediction_histogram": {
+        "0": 963,
+        "1": 18477,
+        "2": 523,
+        "3": 24,
+        "4": 9,
+        "5": 2,
+        "9": 1,
+        "12": 1
+      }
+    },
+    "20231031143852": {
+      "role": "frozen_replication",
+      "status": "ineligible_frozen_protocol",
+      "reason": "only 3 wraps; no retained adjacent pair after trim"
+    },
+    "20231106155351": {
+      "role": "frozen_replication",
+      "status": "ineligible_frozen_protocol",
+      "reason": "only 3 wraps; no retained adjacent pair after trim"
+    },
+    "20231221180251": {
+      "role": "frozen_replication",
+      "status": "ineligible_frozen_protocol",
+      "reason": "only 2 wraps; no retained adjacent pair after trim"
+    }
+  }
+}
