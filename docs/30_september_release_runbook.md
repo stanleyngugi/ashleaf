@@ -1,9 +1,9 @@
 # September FrameBridge Release Runbook
 
 Date: 2026-09-22
-Status: **active release plan**
+Status: **first public release complete; community and submission gates remain active**
 Deadline: September 30, 2026, 11:59 PM Pacific
-Repository state at drafting: private GitHub repository; local release candidate not yet published
+Repository state at drafting: private GitHub repository; public release completed on 2026-09-23 (see [release record](33_public_release_2026-09-23.md))
 
 ## Release thesis
 
@@ -107,13 +107,13 @@ The [public-data quickstart](32_framebridge_public_demo.md) separately verifies 
 - [x] fail-loudly release checker;
 - [x] secret and accidental-large-file audit (no credential matches; no non-ignored file over 10 MiB);
 - [x] inspect the complete staged diff;
-- [x] create a local release commit (`b3c6f1e` before final documentation amendment);
+- [x] create and audit the local release commits (`5a41689`, then `5820038`);
 - [x] owner directed publication on 2026-09-23, contingent on independent audit and fixes.
 
 ### Gate B — first public release
 
-- make the repository public after resolving material audit findings;
-- push one coherent release commit;
+- [x] make the repository public after resolving material audit findings;
+- [x] push the audited release to `main`;
 - create a concise GitHub release/tag only if the committed tree is reproducible;
 - include the FB06 and FB07 reports, chart, quickstart, and known limitations;
 - avoid uploading ignored CT payloads or pair caches unless separately hosted with appropriate licenses.

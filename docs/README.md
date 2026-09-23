@@ -20,6 +20,7 @@ Read these in order:
 12. [September FrameBridge Release Runbook](30_september_release_runbook.md): official-criteria alignment, release gates, commands, public narrative, AI disclosure, and submission checklist.
 13. [Prepublication Claim Audit](31_prepublication_claim_audit_2026-09-23.md): system-level release thesis, constant-label baseline, evidence boundaries, and independent-review action log.
 14. [FrameBridge Public-Data Demo](32_framebridge_public_demo.md): cloneable CPU-only metadata/index planning demo, expected output, storage costs, and Windows/Unix commands.
+15. [Public Release Record — 2026-09-23](33_public_release_2026-09-23.md): published repository, audit and test evidence, claim boundary, and next prize gates.
 
 The root [README](../README.md) is the compact project entry point. The experiment queue lives in [`experiments/registry.csv`](../experiments/registry.csv).
 
@@ -73,6 +74,7 @@ The root [README](../README.md) is the compact project entry point. The experime
 | [30 September Release Runbook](30_september_release_runbook.md) | **Active** | Official-rule alignment, hygiene/publication/community/submission gates, quick verification, and disclosure text |
 | [31 Prepublication Claim Audit](31_prepublication_claim_audit_2026-09-23.md) | **Active** | Release framing, constant `+1` baseline, evidence map, and audit resolution |
 | [32 FrameBridge Public-Data Demo](32_framebridge_public_demo.md) | **Active** | Hash-pinned metadata fetch, sparse index proof, range-plan quickstart, and full-pipeline dependency boundary |
+| [33 Public Release Record](33_public_release_2026-09-23.md) | **Active** | Public GitHub status, audited release checks, known limitations, and next actions |
 
 ### Data contracts and reliability components
 
