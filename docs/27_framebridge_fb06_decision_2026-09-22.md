@@ -1,5 +1,7 @@
 # FrameBridge FB06 Decision — 2026-09-22
 
+**2026-09-23 claim update:** the local-pair targets are all constructed `dw=+1`, so a constant `+1` predictor scores 100%. Read this decision as an E1 agreement diagnostic, not as evidence of predictive improvement. See the [prepublication claim audit](31_prepublication_claim_audit_2026-09-23.md) for the controlling release interpretation.
+
 Status: **active strategy decision**
 Supersedes: the expectation that frozen FB05 would replicate uniformly across the remaining meshes
 

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:25px;font-weight:700}.sub{font-size:14px;fill:#526071}.axis{font-size:14px}.tick{font-size:12px;fill:#526071}.legend{font-size:13px}</style>
-<text class="title" x="105" y="39">FrameBridge FB07: accuracy–coverage transfer</text>
-<text class="sub" x="105" y="65">Four leave-one-segment-out rotations · macro exact accuracy · internal post-FB06 cross-validation</text>
+<text class="title" x="105" y="39">FrameBridge FB07: E1 agreement–coverage</text>
+<text class="sub" x="105" y="65">Known-adjacent dw=+1 pairs · internal LOSO · constant +1 baseline: 100%</text>
 <line x1="105" y1="530.0" x2="945" y2="530.0" stroke="#d9dee8" stroke-width="1"/>
 <text class="tick" x="91" y="534.0" text-anchor="end">0.4</text>
 <line x1="105" y1="457.5" x2="945" y2="457.5" stroke="#d9dee8" stroke-width="1"/>
@@ -32,7 +32,7 @@
 <line x1="105" y1="530" x2="945" y2="530" stroke="#172033" stroke-width="1.5"/>
 <line x1="105" y1="95" x2="105" y2="530" stroke="#172033" stroke-width="1.5"/>
 <text class="axis" x="525.0" y="594" text-anchor="middle">Selected coverage</text>
-<text class="axis" transform="translate(27 312.5) rotate(-90)" text-anchor="middle">Macro exact dw=1 accuracy</text>
+<text class="axis" transform="translate(27 312.5) rotate(-90)" text-anchor="middle">Macro E1 agreement with +1</text>
 <polyline points="105.0,147.2 198.3,149.9 291.7,160.9 478.3,184.8 665.0,209.8 945.0,245.9" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="105.0" cy="147.2" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
 <circle cx="198.3" cy="149.9" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>

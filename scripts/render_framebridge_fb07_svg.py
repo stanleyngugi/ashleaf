@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the FB07 macro accuracy-coverage curve as dependency-free SVG."""
+"""Render the FB07 positive-only E1 agreement-coverage curve as SVG."""
 
 from __future__ import annotations
 
@@ -39,8 +39,8 @@ def main() -> int:
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#ffffff"/>',
         '<style>text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:25px;font-weight:700}.sub{font-size:14px;fill:#526071}.axis{font-size:14px}.tick{font-size:12px;fill:#526071}.legend{font-size:13px}</style>',
-        '<text class="title" x="105" y="39">FrameBridge FB07: accuracy–coverage transfer</text>',
-        '<text class="sub" x="105" y="65">Four leave-one-segment-out rotations · macro exact accuracy · internal post-FB06 cross-validation</text>',
+        '<text class="title" x="105" y="39">FrameBridge FB07: E1 agreement–coverage</text>',
+        '<text class="sub" x="105" y="65">Known-adjacent dw=+1 pairs · internal LOSO · constant +1 baseline: 100%</text>',
     ]
     for value in (0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0):
         y = sy(value)
@@ -54,7 +54,7 @@ def main() -> int:
         f'<line x1="{left}" y1="{top + plot_h}" x2="{left + plot_w}" y2="{top + plot_h}" stroke="#172033" stroke-width="1.5"/>',
         f'<line x1="{left}" y1="{top}" x2="{left}" y2="{top + plot_h}" stroke="#172033" stroke-width="1.5"/>',
         f'<text class="axis" x="{left + plot_w / 2}" y="{height - 26}" text-anchor="middle">Selected coverage</text>',
-        f'<text class="axis" transform="translate(27 {top + plot_h / 2}) rotate(-90)" text-anchor="middle">Macro exact dw=1 accuracy</text>',
+        f'<text class="axis" transform="translate(27 {top + plot_h / 2}) rotate(-90)" text-anchor="middle">Macro E1 agreement with +1</text>',
     ])
     for method, label, color in METHODS:
         values = [result["aggregate"][method][f"{coverage:.2f}"]["macro_mean_accuracy"] for coverage in coverages]

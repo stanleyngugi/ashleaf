@@ -3,7 +3,7 @@
 Date: 2026-09-22
 Experiment: E0011 / FB07
 Evidence class: **internal leave-one-segment-out cross-validation after FB06; not new held-out evidence**
-Outcome: **geometry model passes the preregistered primary gate, with a modest gain over a strong distance-only baseline**
+Outcome: **geometry model passes the locally specified primary gate, with a modest gain over a strong distance-only baseline**
 
 ## Executive result
 
@@ -17,7 +17,9 @@ Primary metric: macro mean exact accuracy at 30% coverage.
 | Native E1 confidence | 0.788943 | 0.518077 | 0.777755 | 19,897 |
 | **Geometry logistic** | **0.912847** | **0.828495** | **0.910640** | 19,897 |
 
-The preregistered “promising” gate is satisfied: the geometry model exceeds both baselines in macro accuracy and improves rather than reduces worst-segment accuracy. The gain over distance-only is only 0.37 percentage points macro, however, so distance remains the dominant practical baseline.
+The locally specified “promising” gate is satisfied: the geometry model exceeds both baselines in macro E1 agreement and improves rather than reduces worst-segment agreement. The gain over distance-only is only 0.37 percentage points macro, however, and geometry is worse on three of four individual folds; distance remains the dominant practical baseline. The protocol and result entered public Git history together, so this is not independently verifiable public preregistration.
+
+**Single-target limitation (2026-09-23 audit):** every local pair has true `dw=+1`; a constant `+1` predictor scores 100% at any selected coverage. FB07 ranks where E1 itself is correct on this known-adjacent diagnostic. It does not measure constraint-generation precision among unknown candidate pairs or improvement to spiral fitting.
 
 ## Claim boundary
 

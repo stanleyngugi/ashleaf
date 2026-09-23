@@ -18,6 +18,8 @@ Read these in order:
 10. [Research Worklog — 2026-09-22](28_research_worklog_2026-09-22.md): material progress, failures, storage actions, verification state, and exact evidence boundaries.
 11. [FB07 Confidence Protocol](29_fb07_confidence_protocol.md): preregistered leave-one-segment-out confidence-ranking diagnostic.
 12. [September FrameBridge Release Runbook](30_september_release_runbook.md): official-criteria alignment, release gates, commands, public narrative, AI disclosure, and submission checklist.
+13. [Prepublication Claim Audit](31_prepublication_claim_audit_2026-09-23.md): system-level release thesis, constant-label baseline, evidence boundaries, and independent-review action log.
+14. [FrameBridge Public-Data Demo](32_framebridge_public_demo.md): cloneable CPU-only metadata/index planning demo, expected output, storage costs, and Windows/Unix commands.
 
 The root [README](../README.md) is the compact project entry point. The experiment queue lives in [`experiments/registry.csv`](../experiments/registry.csv).
 
@@ -69,6 +71,8 @@ The root [README](../README.md) is the compact project entry point. The experime
 | [28 Research Worklog — 2026-09-22](28_research_worklog_2026-09-22.md) | **Active log** | Chronological experiment, verification, failure, and storage record |
 | [29 FB07 Confidence Protocol](29_fb07_confidence_protocol.md) | **Active** | Frozen LOSO ranking models, features, metrics, interpretation gates, and claim boundary |
 | [30 September Release Runbook](30_september_release_runbook.md) | **Active** | Official-rule alignment, hygiene/publication/community/submission gates, quick verification, and disclosure text |
+| [31 Prepublication Claim Audit](31_prepublication_claim_audit_2026-09-23.md) | **Active** | Release framing, constant `+1` baseline, evidence map, and audit resolution |
+| [32 FrameBridge Public-Data Demo](32_framebridge_public_demo.md) | **Active** | Hash-pinned metadata fetch, sparse index proof, range-plan quickstart, and full-pipeline dependency boundary |
 
 ### Data contracts and reliability components
 

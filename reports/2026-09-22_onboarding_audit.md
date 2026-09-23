@@ -26,7 +26,7 @@ The local `.venv` is Linux/WSL-oriented. Running it directly from PowerShell is 
 Command:
 
 ```bash
-cd /mnt/c/Users/stanley/Desktop/new_vesuvius
+cd /path/to/new_vesuvius
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -q
 ```
 

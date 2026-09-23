@@ -1,12 +1,12 @@
-# FB05 — Independent Local-Correspondence E1 Diagnostic
+# FB05 — Verified-Mesh Local-Correspondence E1 Diagnostic
 
 Date: 2026-09-22
 Experiment: E0011, FrameBridge independent E1 validation
-Outcome: **Strong one-mesh replication candidate; 92.385% exact adjacent-winding accuracy at full coverage**
+Outcome: **One-mesh positive-only diagnostic; 92.385% E1 agreement with constructed adjacent-wrap pairs at full coverage**
 
 ## Executive result
 
-The preregistered local-correspondence protocol was run on verified pilot mesh `20231022170901`. It uses same-row nearest correspondences between adjacent wraps, orders every pair outward relative to the public umbilicus, and evaluates the frozen E1 estimator without refitting.
+The locally specified local-correspondence protocol was run on verified pilot mesh `20231022170901`. It uses same-row nearest correspondences between adjacent wraps, orders every pair outward relative to the public umbilicus, and evaluates the frozen E1 estimator without refitting. The pair geometry was independent of E1 parameter tuning; it was not an independent scroll or blind human crossing annotation.
 
 | Metric | Result |
 |---|---:|
@@ -18,11 +18,11 @@ The preregistered local-correspondence protocol was run on verified pilot mesh `
 | MAE M2 | **0.0794** |
 | Pairs with all seven rays valid | 20,000 |
 
-This result is substantially stronger than the failed FB04 generic-pair score, and its geometry closely matches the annotation regime in which a local ray integral is meaningful. It remains a diagnostic on one independently verified mesh and must be replicated before becoming a broad claim.
+This result is substantially stronger than the failed FB04 generic-pair score as a test of where E1 recovers constructed mesh adjacency. **Every target is `dw=+1`; a constant `+1` predictor is 100% exact with zero MAE on this population.** The score is therefore not a predictive gain over a trivial label baseline. It remains a one-mesh estimator diagnostic, not evidence of unknown-pair precision or fitter improvement.
 
-## Preregistration and separation from FB04
+## Local protocol timing and separation from FB04
 
-The protocol was written to `docs/26_e1_applicability_protocol.md` after observing FB04's frozen negative result but before running E1 on the local pairs. It declared:
+The protocol was written to `docs/26_e1_applicability_protocol.md` after observing FB04's frozen negative result but before running E1 on the local pairs. The protocol and result first entered public Git history together, so this timing is a project record rather than independently verifiable public preregistration. It declared:
 
 - same-row adjacent-wrap nearest correspondences;
 - stride 10 along row and curve;
@@ -51,7 +51,7 @@ The verified mesh yielded:
 | Equal-radius rejections | 0 |
 | Endpoint-order swaps to outward-positive | 19,981 |
 
-The 99.905% swap rate independently confirms the convention issue exposed by FB04: increasing mesh parameter/wrap index was almost exactly opposite the annotation arm's outward-positive direction. Pair orientation was determined geometrically before reading E1 predictions.
+The 99.905% swap rate is consistent with the convention issue exposed by FB04: increasing mesh parameter/wrap index was almost exactly opposite the annotation arm's outward-positive direction. Pair orientation was determined geometrically before reading E1 predictions.
 
 Pairs were distributed across the five retained adjacent-wrap gaps: 4,310, 4,112, 4,010, 3,874, and 3,694.
 

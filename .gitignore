@@ -17,6 +17,7 @@ wandb/
 
 # Local environments and secrets
 .venv/
+.venv-win/
 venv/
 __pycache__/
 *.py[cod]

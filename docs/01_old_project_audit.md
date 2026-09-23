@@ -1,6 +1,6 @@
 # Audit of the Former Vesuvius Repository
 
-Source: `C:\Users\stanley\Documents\folder\Vesuvius` (read-only reference repository).
+Source: a prior local Vesuvius repository (read-only reference; local path omitted for privacy).
 
 ## Inventory
 
@@ -51,4 +51,3 @@ Several old local evaluations approximated the official metric or overlapped tra
 We will port concepts first, then small tested components. We will not copy the old repository wholesale because it contains stale paths, duplicate documents, historical speculative claims, dirty worktree state, and exposed credentials in historical files/remotes.
 
 The official current integration point is `ScrollPrize/villa`; our repository should provide adapters, benchmarks, and contributions around it rather than fork the entire ecosystem.
-

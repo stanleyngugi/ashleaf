@@ -22,6 +22,8 @@ The complete FB05 local-correspondence protocol was frozen and applied without e
 
 This does not replicate the pilot's 92.385% as a universal score. It does establish that the frozen mechanism transfers strongly on two held-out segments and fails materially on a third. The result is therefore a heterogeneous reliability result, not a general-accuracy claim.
 
+**Single-target baseline (2026-09-23 audit):** all local pairs were constructed and oriented with true `dw=+1`. A constant `+1` predictor scores 100% exact with zero MAE on this diagnostic. The FB06 score measures E1's agreement with known mesh adjacency, not its ability to label unknown candidate pairs. See [the claim audit](../docs/31_prepublication_claim_audit_2026-09-23.md).
+
 ## Per-mesh results, reported before pooling
 
 | Mesh | Role | Status | Pairs | Exact signed | MAE | Median gap |

@@ -1,6 +1,6 @@
 # FB07 — Leave-One-Segment-Out Confidence Protocol
 
-Status: **preregistered before running FB07 values**
+Status: **specified locally before running FB07 values; not publicly timestamped in advance**
 Evidence class: internal cross-validation on already observed FB05/FB06 segments; not new held-out evidence
 
 ## Question
@@ -17,6 +17,8 @@ Use the four FB06-eligible segments and their unchanged pair caches/predictions:
 - `20231022170901`
 
 The binary correctness label is exactly `prediction == +1`, because every pair's declared local adjacent-wrap truth is `dw=+1`. No pair is regenerated and E1 is not rerun.
+
+This is a positive-only estimator diagnostic. A constant `+1` predictor has 100% exact accuracy on the pair labels; the ranking exercise asks only where frozen E1 agrees with them.
 
 ## Cross-validation
 

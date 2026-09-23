@@ -1,6 +1,6 @@
 # E1 Applicability-Matched Mesh Protocol
 
-Status: completed preregistered diagnostic protocol following the frozen negative FB04 result. It supplements and does not replace FB04. FB05 was the development pilot; frozen FB06 replication produced three eligible held-out meshes with 45.60%, 86.72%, and 92.07% exact accuracy, plus five ineligible held-out meshes. See the FB06 report; do not interpret FB05 as a universal 92% result.
+Status: completed diagnostic protocol, specified locally after the FB04 negative result and before FB05 scoring. It supplements and does not replace FB04. FB05 was the development pilot; unchanged-protocol FB06 replication produced three eligible held-out meshes with 45.60%, 86.72%, and 92.07% E1 agreement with constructed `dw=+1` pairs, plus five ineligible held-out meshes. A constant `+1` baseline gets 100% on these labels. The protocol and results first entered the public Git history together, so this is not independently verifiable public preregistration.
 
 ## Motivation
 
@@ -61,7 +61,7 @@ This protocol may show whether the E1 mechanism transfers to independent geometr
 
 ## Promotion criteria
 
-- If exact signed `dw=1` accuracy is materially above chance with high coverage, extend the same frozen protocol to all nine meshes.
+- If E1 recovers a substantial fraction of constructed adjacent `dw=+1` relations with high technical coverage, extend the same unchanged protocol to all nine meshes. This is not a test against a class-prediction chance baseline; a constant `+1` labeler is perfect on this target set.
 - If magnitude is accurate but sign is not, audit registration/umbilicus conventions without changing the recorded run.
 - If both magnitude and sign fail, retain FrameBridge as a benchmark-contract/reliability contribution and do not spend GPU time on E1.
 - In all cases, publish FB04 alongside this diagnostic so the negative generic-pair result remains visible.
