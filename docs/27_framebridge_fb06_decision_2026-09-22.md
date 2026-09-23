@@ -2,6 +2,8 @@
 
 **2026-09-23 claim update:** the local-pair targets are all constructed `dw=+1`, so a constant `+1` predictor scores 100%. Read this decision as an E1 agreement diagnostic, not as evidence of predictive improvement. See the [prepublication claim audit](31_prepublication_claim_audit_2026-09-23.md) for the controlling release interpretation.
 
+**2026-09-23 execution update:** the public release is complete. The [winning sprint](36_september_winning_sprint_2026-09-23.md) supersedes the release-work and outreach instructions below; those remain as the historical decision record.
+
 Status: **active strategy decision**
 Supersedes: the expectation that frozen FB05 would replicate uniformly across the remaining meshes
 

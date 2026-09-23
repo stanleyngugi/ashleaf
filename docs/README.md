@@ -17,12 +17,13 @@ Read these in order:
 9. [FrameBridge FB06 Decision](27_framebridge_fb06_decision_2026-09-22.md): mixed held-out replication, honest claim boundary, competitive assessment, and FB07 plan.
 10. [Research Worklog — 2026-09-22](28_research_worklog_2026-09-22.md): material progress, failures, storage actions, verification state, and exact evidence boundaries.
 11. [FB07 Confidence Protocol](29_fb07_confidence_protocol.md): preregistered leave-one-segment-out confidence-ranking diagnostic.
-12. [September FrameBridge Release Runbook](30_september_release_runbook.md): official-criteria alignment, release gates, commands, public narrative, AI disclosure, and submission checklist.
+12. [September FrameBridge Release Runbook](30_september_release_runbook.md): official-criteria alignment, release gates, commands, public narrative, and submission checklist.
 13. [Prepublication Claim Audit](31_prepublication_claim_audit_2026-09-23.md): system-level release thesis, constant-label baseline, evidence boundaries, and independent-review action log.
 14. [FrameBridge Public-Data Demo](32_framebridge_public_demo.md): cloneable CPU-only metadata/index planning demo, expected output, storage costs, and Windows/Unix commands.
 15. [Public Release Record — 2026-09-23](33_public_release_2026-09-23.md): published repository, audit and test evidence, claim boundary, and next prize gates.
 16. [Community Introduction Draft — 2026-09-23](34_community_outreach_draft_2026-09-23.md): ready-to-post Discord framing and channel/feedback checklist; not yet posted.
 17. [Ashleaf Name and Repository Rename](35_ashleaf_name_2026-09-23.md): project/tool naming hierarchy, public URL migration, and verification checklist.
+18. [September Winning Sprint — 2026-09-23](36_september_winning_sprint_2026-09-23.md): current decision, evidence gates, owner-facing calendar, and submission path.
 
 The root [README](../README.md) is the compact project entry point. The experiment queue lives in [`experiments/registry.csv`](../experiments/registry.csv).
 
@@ -79,6 +80,7 @@ The root [README](../README.md) is the compact project entry point. The experime
 | [33 Public Release Record](33_public_release_2026-09-23.md) | **Active** | Public GitHub status, audited release checks, known limitations, and next actions |
 | [34 Community Introduction Draft](34_community_outreach_draft_2026-09-23.md) | **Active** | Discord announcement draft, current browser blocker, and feedback-recording discipline |
 | [35 Ashleaf Name and Repository Rename](35_ashleaf_name_2026-09-23.md) | **Active** | Brand decision, repository URL migration, and publication verification |
+| [36 September Winning Sprint](36_september_winning_sprint_2026-09-23.md) | **Active** | Prize-oriented next experiments, integration proof, decision gates, and deadline |
 
 ### Data contracts and reliability components
 

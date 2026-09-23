@@ -78,6 +78,8 @@ Try the [CPU-only public-data demo](docs/32_framebridge_public_demo.md) to verif
 
 The [2026-09-23 release record](docs/33_public_release_2026-09-23.md) identifies the public commit, checks, reviewer findings, and next evaluation gates.
 
+The [September winning sprint](docs/36_september_winning_sprint_2026-09-23.md) is the current prize plan: independent community use, a frozen mixed-label evaluation, physical/parity checks, and a reason-coded path into fitting. The first public release is the foundation, not the final September demonstration.
+
 Verify the compact FrameBridge release summaries without downloading CT data:
 
 ```bash

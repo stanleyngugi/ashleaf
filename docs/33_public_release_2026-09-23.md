@@ -39,6 +39,6 @@ The release is the beginning of the monthly-prize campaign, not the submission's
 3. Inspect a stratified sample of local chords in CT cross sections and verify physical registration or dense/sparse E1 parity.
 4. Evaluate a reason-coded accept/reject output in an official-compatible constraint format and measure the effect on spiral fitting.
 5. Run adaptive seam trimming only as a newly named exploratory experiment; preserve the original frozen FB06 denominator and result.
-6. Submit the public, documented work before the September 30 Pacific deadline with AI assistance disclosed and every metric tied to its evaluation population.
+6. Submit the public, documented work before the September 30 Pacific deadline with the human owner accountable for the entry and every metric tied to its evaluation population. See the [current winning sprint](36_september_winning_sprint_2026-09-23.md) for the sharper prize gate.
 
 No GPU work is required for these immediate gates; Colab remains reserved for experiments with a controlled CPU baseline and a justified GPU hypothesis.

@@ -5,6 +5,8 @@ Experiment: E0011 / FB07
 Evidence class: **internal leave-one-segment-out cross-validation after FB06; not new held-out evidence**
 Outcome: **geometry model passes the locally specified primary gate, with a modest gain over a strong distance-only baseline**
 
+The release-work list near the end of this historical report reflects the September 22 plan. Current outreach and submission decisions are recorded in the [September 23 winning sprint](../docs/36_september_winning_sprint_2026-09-23.md).
+
 ## Executive result
 
 FB07 asks whether pair reliability can be ranked across segments after the heterogeneous FB06 result. Four rotations were run. In each rotation, all learned parameters and feature standardization came from three segments and the fourth segment was ranked without using its labels for fitting.

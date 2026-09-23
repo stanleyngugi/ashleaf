@@ -120,7 +120,8 @@ The [public-data quickstart](32_framebridge_public_demo.md) separately verifies 
 
 ### Gate C — community feedback
 
-- prepare an AI-disclosed technical summary for the appropriate Discord channel;
+- use the owner-approved community introduction in [document 34](34_community_outreach_draft_2026-09-23.md) once the channel and posting rules are verified;
+- if a channel requires attribution for this type of post, do not silently override either its rule or the owner's chosen copy; select another suitable channel or resolve the conflict with the owner;
 - lead with the tool and failure case, not a prize request;
 - ask for one concrete test: another user reproducing the release check or trying the frame contract on a different mesh;
 - respond quickly to questions and bugs;
@@ -132,7 +133,7 @@ The [public-data quickstart](32_framebridge_public_demo.md) separately verifies 
 - link the public repository and exact release commit/tag;
 - explain standard-format inputs and outputs;
 - provide commands, system requirements, runtime, storage, and expected checksums;
-- disclose AI assistance;
+- identify the human project owner as responsible for the submission and cite the code, data, upstream contributions, and reproducible evidence where relevant; do not add a tool-credit line to the outreach or submission by default;
 - present the negative controls and five ineligible meshes;
 - state which numbers are frozen held-out, development, or internal cross-validation;
 - explain how the tool can prevent sheet-switch constraints from reaching spiral fitting.
@@ -140,10 +141,6 @@ The [public-data quickstart](32_framebridge_public_demo.md) separately verifies 
 ## Proposed public summary
 
 > FrameBridge is an open-source trust layer for Vesuvius winding evidence. It makes 2.4 µm/9.6 µm coordinate frames explicit, proves sparse CT support before evaluation, and exposes when a candidate pair falls outside an estimator's reliable operating regime. The wrong-frame control had zero supported rays; the corrected transform supported all seven rays for 19,999/19,999 pilot pairs. On verified adjacent-wrap pairs, E1 agreement varies sharply across segments, and geometry helps identify where it fails. The release includes reproducible frame and sparse-I/O checks, negative controls, per-segment diagnostics, and a path toward confidence-aware constraint generation. These diagnostic pairs all have target `dw=+1`, so the current accuracy figures are not a gain over a constant-label predictor; mixed-label candidate and downstream fitter tests are the next application milestones.
-
-## Proposed AI disclosure
-
-> This project was developed with substantial assistance from OpenAI Codex for repository inspection, code generation, test design, documentation, web research, and experiment orchestration. The human project owner directed the objective and publication decisions. All reported numerical results were produced by the checked-in scripts against publicly identified data; frozen, exploratory, and internal-cross-validation evidence are labeled separately. No AI-generated claim is used as a substitute for the recorded artifacts, tests, or hashes.
 
 ## Known limitations to publish prominently
 

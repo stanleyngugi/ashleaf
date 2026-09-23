@@ -1,6 +1,6 @@
 # Competitive Intelligence — 2026-09-22
 
-Status: internal working note; Discord observations are contextual and must be revalidated against durable public artifacts before being used in a release claim.
+Status: internal working note; Discord observations are contextual and must be revalidated against durable public artifacts before being used in a release claim. Its September 22 publication instructions are historical; the [September 23 winning sprint](36_september_winning_sprint_2026-09-23.md) governs the current owner-approved outreach and channel-rule check.
 
 ## Purpose
 
