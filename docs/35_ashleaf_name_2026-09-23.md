@@ -24,7 +24,9 @@ The original `new_vesuvius` name was a temporary workspace label. The GitHub rep
 - [x] Update package distribution metadata while retaining `scroll_lab` import compatibility.
 - [x] Update hard-coded public repository links and Colab clone instructions.
 - [x] Update local `origin` URL to `https://github.com/stanleyngugi/ashleaf.git`.
-- [ ] Push this documentation and verify the branch is synchronized.
+- [x] Push the rename documentation as `9734b9edf36a7df7ecb9d76876a5bf1920e27b50` and verify `main` is synchronized with `origin/main`.
 - [x] Run 64 unit tests and a dry-run editable installation check (`Would install ashleaf-0.1.0`).
 
 The name check was a quick web/GitHub collision scan, not trademark clearance. No trademark, domain, PyPI publication, or exclusive use claim is made. The build-backend dry run created local `egg-info` metadata; those generated files were removed and `*.egg-info/` is ignored going forward.
+
+GitHub's API resolves the former `stanleyngugi/new_vesuvius` path to the canonical `stanleyngugi/ashleaf` repository. This preserves access to links in already-published discussions while new links use the Ashleaf URL.
