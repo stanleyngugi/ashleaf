@@ -2,11 +2,11 @@
 
 Status: public research-toolkit release
 
-Repository: <https://github.com/stanleyngugi/new_vesuvius>
+Repository (renamed Ashleaf after the first release): <https://github.com/stanleyngugi/ashleaf>
 
 ## What shipped
 
-The first public FrameBridge package was pushed to `main` on 2026-09-23 and the GitHub repository was changed from private to public. The audited release commit is `582003844fbf534e4803ea0439a328d93730cf35`, following the main implementation commit `5a41689`.
+The first public FrameBridge package was pushed to `main` on 2026-09-23 and the GitHub repository was changed from private to public. It was initially published under the temporary `new_vesuvius` name and subsequently renamed **Ashleaf**; see the [rename record](35_ashleaf_name_2026-09-23.md). The audited release commit is `582003844fbf534e4803ea0439a328d93730cf35`, following the main implementation commit `5a41689`.
 
 FrameBridge is presented as a trust layer under construction for virtual-unwrapping evidence. This release already provides an explicit 2.4 µm→9.6 µm coordinate contract, sparse resident-pool index validation and range planning, negative controls, E1 applicability and failure diagnostics on verified-mesh geometry, a CPU-only public-data quickstart, compact checked evidence, tests, and extensive experiment documentation.
 

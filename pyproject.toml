@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vesuvius-research-lab"
+name = "ashleaf"
 version = "0.1.0"
-description = "Experiment-first tooling for Vesuvius Challenge geometry and validation"
+description = "Open-source virtual unwrapping research and validation tools for the Herculaneum scrolls"
 requires-python = ">=3.10"
 dependencies = []
 

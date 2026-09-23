@@ -1,8 +1,8 @@
-# New Vesuvius Research Lab
+# Ashleaf
 
-An experiment-first repository for the current Vesuvius Challenge / Scroll Prize.
+Virtual unwrapping research for the Herculaneum scrolls. Ashleaf is an experiment-first, open-source research project working toward recovering the pages preserved beneath the ash.
 
-**FrameBridge is the current release candidate:** a coordinate-safe, sparse, failure-aware validation layer for winding evidence. It makes a subtle but consequential pipeline error visible: a pair of points can look valid in mesh coordinates while every estimator ray misses the CT-derived field. FrameBridge makes frames, support, applicability, and estimator failure inspectable before evidence is trusted downstream.
+**FrameBridge is Ashleaf's first released tool:** a coordinate-safe, sparse, failure-aware validation layer for winding evidence. It makes a subtle but consequential pipeline error visible: a pair of points can look valid in mesh coordinates while every estimator ray misses the CT-derived field. FrameBridge makes frames, support, applicability, and estimator failure inspectable before evidence is trusted downstream.
 
 The bigger vision is a **trust layer for virtual unwrapping**: every candidate constraint should carry enough frame, data-support, applicability, and reliability evidence to be accepted, rejected, or reviewed for a reason. The current open release establishes that foundation and exposes concrete Paris 4 failure cases; mixed-label constraint generation and fitter-level benefit are the next tests, not achievements claimed here.
 

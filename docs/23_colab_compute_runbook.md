@@ -34,14 +34,14 @@ Use a fresh checkout rather than copying untracked notebook cells into the proje
 
 ```bash
 !nvidia-smi
-!git clone <PUBLIC_OR_AUTHORIZED_REPO_URL> /content/new_vesuvius
-%cd /content/new_vesuvius
+!git clone https://github.com/stanleyngugi/ashleaf.git /content/ashleaf
+%cd /content/ashleaf
 !git checkout <EXACT_COMMIT>
 !python -m pip install -e '.[pixels]'
 !PYTHONPATH=src python -m unittest discover -s tests -q
 ```
 
-For a private repository, use an authorized credential flow that does not expose a token in notebook output. Once a public/upstream branch exists, prefer a plain immutable commit checkout.
+The Ashleaf repository is public, so no credential is required for the clone. Prefer a plain immutable commit checkout. For any separate private data or repository, use an authorized credential flow that does not expose a token in notebook output.
 
 ## Storage policy
 

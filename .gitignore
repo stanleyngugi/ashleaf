@@ -20,6 +20,7 @@ wandb/
 .venv-win/
 venv/
 __pycache__/
+*.egg-info/
 *.py[cod]
 .env
 .env.*
