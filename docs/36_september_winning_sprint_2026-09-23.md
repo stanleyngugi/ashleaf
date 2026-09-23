@@ -14,7 +14,7 @@ The public pitch is confident: FrameBridge is the trust layer that tells an unwr
 
 ### P0 — community release, today
 
-- Post the [owner-approved introduction](34_community_outreach_draft_2026-09-23.md) in a verified, appropriate Vesuvius Discord channel. The browser-control inventory failed on 2026-09-23, so **no Discord post has been made or channel selected by this task**. Resume only when the channel list, rules, and final delivery can be observed; otherwise the owner can post the saved copy directly.
+- The owner-approved introduction was posted on 2026-09-23 in the [Ashleaf `#show-and-tell` thread](https://discord.com/channels/1079907749569237093/1162822163171119194/threads/1552405113639931964). It was split into the opening post and an immediate reply to stay within Discord's message limit. Follow feedback in that thread; do not duplicate the announcement elsewhere without a specific reason.
 - Ask for a precise external test: independently run the 4.5 MiB metadata quickstart or check the contract on another verified mesh. Record the channel URL, feedback, environment, failures, and fixes. Public use is evidence; an unobserved post is not.
 - Link the public repository, quickstart, and one compact failure example in any subsequent prize entry.
 
@@ -44,7 +44,7 @@ If a real spiral-fitting run is feasible within the deadline, compare the same i
 
 | Window | Primary deliverable | Evidence gate |
 |---|---|---|
-| Sep 23 | Community introduction; exact public repo and quickstart; external tester request | Verified post URL or explicit unposted status |
+| Sep 23 | Community introduction; exact public repo and quickstart; external tester request | [Verified `#show-and-tell` thread](https://discord.com/channels/1079907749569237093/1162822163171119194/threads/1552405113639931964) |
 | Sep 24–25 | Frozen mixed-candidate protocol, label provenance, baseline runner | Label audit and no leakage before outcome inspection |
 | Sep 26–27 | Held-out mixed-label results; stratified failure cases; parity/registration checks | Per-mesh and per-class metrics with coverage and negatives |
 | Sep 28 | Reason-coded adapter and smallest credible downstream comparison | Reproducible fixture; real fitter result only if actually run |

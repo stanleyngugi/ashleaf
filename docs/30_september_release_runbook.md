@@ -120,7 +120,7 @@ The [public-data quickstart](32_framebridge_public_demo.md) separately verifies 
 
 ### Gate C — community feedback
 
-- use the owner-approved community introduction in [document 34](34_community_outreach_draft_2026-09-23.md) once the channel and posting rules are verified;
+- the owner-approved community introduction was posted in the [Ashleaf `#show-and-tell` thread](https://discord.com/channels/1079907749569237093/1162822163171119194/threads/1552405113639931964) on 2026-09-23; follow up there and record substantive feedback;
 - if a channel requires attribution for this type of post, do not silently override either its rule or the owner's chosen copy; select another suitable channel or resolve the conflict with the owner;
 - lead with the tool and failure case, not a prize request;
 - ask for one concrete test: another user reproducing the release check or trying the frame contract on a different mesh;

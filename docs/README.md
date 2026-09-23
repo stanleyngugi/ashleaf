@@ -21,9 +21,8 @@ Read these in order:
 13. [Prepublication Claim Audit](31_prepublication_claim_audit_2026-09-23.md): system-level release thesis, constant-label baseline, evidence boundaries, and independent-review action log.
 14. [FrameBridge Public-Data Demo](32_framebridge_public_demo.md): cloneable CPU-only metadata/index planning demo, expected output, storage costs, and Windows/Unix commands.
 15. [Public Release Record — 2026-09-23](33_public_release_2026-09-23.md): published repository, audit and test evidence, claim boundary, and next prize gates.
-16. [Community Introduction Draft — 2026-09-23](34_community_outreach_draft_2026-09-23.md): ready-to-post Discord framing and channel/feedback checklist; not yet posted.
-17. [Ashleaf Name and Repository Rename](35_ashleaf_name_2026-09-23.md): project/tool naming hierarchy, public URL migration, and verification checklist.
-18. [September Winning Sprint — 2026-09-23](36_september_winning_sprint_2026-09-23.md): current decision, evidence gates, owner-facing calendar, and submission path.
+16. [Ashleaf Name and Repository Rename](35_ashleaf_name_2026-09-23.md): project/tool naming hierarchy, public URL migration, and verification checklist.
+17. [September Winning Sprint — 2026-09-23](36_september_winning_sprint_2026-09-23.md): current decision, evidence gates, owner-facing calendar, and submission path.
 
 The root [README](../README.md) is the compact project entry point. The experiment queue lives in [`experiments/registry.csv`](../experiments/registry.csv).
 
@@ -78,7 +77,6 @@ The root [README](../README.md) is the compact project entry point. The experime
 | [31 Prepublication Claim Audit](31_prepublication_claim_audit_2026-09-23.md) | **Active** | Release framing, constant `+1` baseline, evidence map, and audit resolution |
 | [32 FrameBridge Public-Data Demo](32_framebridge_public_demo.md) | **Active** | Hash-pinned metadata fetch, sparse index proof, range-plan quickstart, and full-pipeline dependency boundary |
 | [33 Public Release Record](33_public_release_2026-09-23.md) | **Active** | Public GitHub status, audited release checks, known limitations, and next actions |
-| [34 Community Introduction Draft](34_community_outreach_draft_2026-09-23.md) | **Active** | Discord announcement draft, current browser blocker, and feedback-recording discipline |
 | [35 Ashleaf Name and Repository Rename](35_ashleaf_name_2026-09-23.md) | **Active** | Brand decision, repository URL migration, and publication verification |
 | [36 September Winning Sprint](36_september_winning_sprint_2026-09-23.md) | **Active** | Prize-oriented next experiments, integration proof, decision gates, and deadline |
 
