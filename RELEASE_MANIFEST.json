@@ -1,6 +1,6 @@
 {
-  "kind": "framebridge_public_submission_release_candidate",
-  "status": "local_candidate_not_published_or_submitted",
+  "kind": "framebridge_published_repository_manifest",
+  "status": "published_on_github_prize_form_not_submitted",
   "base_commit": "8eda9afc57f6b31ac41923f28fe26fecfc5da01b",
   "accepted_reviewer_zip_sha256": "a5d22b6fa79b6fe366ab2ee4665ef2ac11a9165947801dbf768b8546c5b5fe74",
   "files": [
@@ -462,9 +462,15 @@
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 1032,
-      "sha256": "1677fc7cc47c6dfdee88ddf9f0682bdbea53d6f3801e6aa30e29e832b3097b63",
-      "origin": "release copy"
+      "bytes": 1601,
+      "sha256": "4956fb66cf57b7c239e783e3f6539864066c01c7c5bd8d2d47442604ab9298cb",
+      "origin": "reviewed snapshot plus explicit publication status"
+    },
+    {
+      "path": "PUBLICATION_RECEIPT.md",
+      "bytes": 1887,
+      "sha256": "ed8b18162e32baa11bc44e0efd6c78ccc44fb864dbc0049b262a5a0b3823ab53",
+      "origin": "publication verification receipt"
     }
   ],
   "excluded": [
@@ -477,5 +483,6 @@
     "credentials",
     "sealed review keys",
     "vendor trees"
-  ]
+  ],
+  "published_payload_commit": "55f77cfd9f152e64761a636cefcf01ed99ef2751"
 }
