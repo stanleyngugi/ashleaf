@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "FB15_sdt_crest_v1_freeze",
+  "status": "written_after_48_development_pilot_before_validation_SDT_acquisition",
+  "rule_source": "src/scroll_lab/sdt_crossings.py",
+  "rule_source_sha256": "8e188eab36e2b992f65b851be2b25f703f09dea430683c68ad1fc22698dc3005",
+  "method_selection_pilot_sha256": "7b4318912d008e51278c87dde7ff7a7d8713d33c6691cfbf2128171203cd8923",
+  "validation_candidate_manifest_sha256": "ff82e0ba2aa742dc9fe3670e0473e85309c70af99827e041fdd7a727b1ea74cc",
+  "surface_sdt_index_sha256": {
+    "meta": "a9efeae369ee6d9ee023896333542e261cca0cc16a96f0430e7b345198935bc6",
+    "coords": "eca27dff1e584eb7a2d36ed91f448434d54cc970c84502ebf219999c36e1c8b9",
+    "table": "40d091aeb40618915ecbce92e4b8954d06a17d82d75dd8aedd10851a07fa6f7b"
+  },
+  "working_to_surface_grid_scale": 2.0,
+  "seven_ray_offsets_working_voxels": [-6, -4, -2, 0, 2, 4, 6],
+  "sampling_spacing_working_voxels_max": 1.0,
+  "profile_smoothing": [0.25, 0.5, 0.25],
+  "crest_height_min": 130.0,
+  "crest_prominence_min": 2.0,
+  "crest_distance_samples_min": 6,
+  "aggregate": "nearest_even_integer_of_median_seven_ray_crest_counts",
+  "primary_population": "300_SHA256_ranked_FB08_relative_development_pairs_from_120_nonpilot_collections",
+  "stress_population": "all_90_FB14_absolute_pairs_outcomes_already_inspected_not_blind",
+  "primary_comparators": [
+    "frozen_E1_magnitude_full_population",
+    "unchanged_FB08_numeric_gate",
+    "E1_confidence_at_coverage"
+  ],
+  "primary_outputs": [
+    "magnitude_and_signed_exact_by_truth_class",
+    "E1_SDT_agreement_coverage_precision_and_residual_errors",
+    "E1_wrong_flag_rate_and_E1_correct_review_rate",
+    "FB08_gate_only_vs_gate_plus_SDT_agreement",
+    "per_collection_dependence_and_ray_consensus"
+  ],
+  "forbidden_after_validation": [
+    "retune_crest_height_prominence_spacing_or_distance_on_validation_pairs",
+    "describe_FB14_as_blind_positive_evaluation",
+    "turn_on_production_export_or_claim_official_fitter_gain_without_separate_evidence"
+  ]
+}

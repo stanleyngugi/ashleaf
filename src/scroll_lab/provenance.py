@@ -1,7 +1,14 @@
-"""Small reproducibility fingerprints with no third-party dependencies."""
+"""Small reproducibility fingerprints and strict cross-platform text hashes.
+
+FB08's internal freeze records raw SHA-256 of Windows-generated JSON files,
+whose text writers emitted CRLF. A clean Unix reproduction emits LF. Accept
+only these two newline encodings of otherwise identical bytes; do not weaken
+the check to semantic JSON equality or ignore content changes.
+"""
 
 from __future__ import annotations
 
+import hashlib
 import platform
 import shutil
 import subprocess
@@ -39,3 +46,19 @@ def environment_fingerprint(repo_root: str | Path | None = None) -> dict[str, ob
         "nvidia_smi_available": nvidia_smi is not None,
     }
 
+
+def sha256_bytes(contents: bytes) -> str:
+    return hashlib.sha256(contents).hexdigest()
+
+
+def matches_frozen_text_sha256(path: str | Path, expected: str) -> bool:
+    """Match raw bytes or their sole LF/CRLF newline conversion."""
+
+    contents = Path(path).read_bytes()
+    if sha256_bytes(contents) == expected:
+        return True
+    if b"\r\n" in contents:
+        converted = contents.replace(b"\r\n", b"\n")
+    else:
+        converted = contents.replace(b"\n", b"\r\n")
+    return sha256_bytes(converted) == expected

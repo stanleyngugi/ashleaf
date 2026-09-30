@@ -2,12 +2,14 @@
 """Fetch pinned, metadata-only Paris 4 inputs for FrameBridge.
 
 This downloads nine small TIFXYZ ``meta.json`` files, the public umbilicus,
-and packed grad-magnitude metadata/verification JSON.  It does not download
+and packed grad-magnitude metadata/index files. Use ``--include-normal`` for
+the paired normal-field metadata/index files. It does not download
 mesh coordinate TIFFs, array bricks, CT chunks, or GPU inputs.
 """
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 from pathlib import Path
 from urllib.request import urlopen
@@ -42,6 +44,18 @@ FILES = {
         f"{DATASET}/lasagna_inputs/las_008_grad_mag.ome.zarr.respool_g4/table.npy",
         "90edae136224642c7aeee02939dc05911e4c4a97fdfcb7390de539feac180848",
     ),
+    "lasagna_inputs/normal_respool_g4_meta.json": (
+        f"{DATASET}/lasagna_inputs/las_008_nx.ome.zarr.respool_g4_pair/meta.json",
+        "9773923fee34f388cad2d9e457f157f16415792771eda0302b88928426025c54",
+    ),
+    "lasagna_inputs/normal_respool_g4_brick_coords.npy": (
+        f"{DATASET}/lasagna_inputs/las_008_nx.ome.zarr.respool_g4_pair/brick_coords.npy",
+        "66ac81cdda16a603e6ca9b35ec91a5fc44382b3025893629dbc0d3eb135dfa41",
+    ),
+    "lasagna_inputs/normal_respool_g4_table.npy": (
+        f"{DATASET}/lasagna_inputs/las_008_nx.ome.zarr.respool_g4_pair/table.npy",
+        "64465ea44666a0d55211ff131821c7c1612fdf0ded88d13e43ae7d5a285a75a6",
+    ),
 }
 
 MESH_META_HASHES = {
@@ -73,8 +87,14 @@ def _fetch(target: Path, url: str, expected: str) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--include-normal", action="store_true",
+                        help="also fetch paired nx/ny resident-pool indexes for normal-field experiments")
+    args = parser.parse_args()
     data = ROOT / "data" / "PHercParis4"
     for relative, (url, expected) in FILES.items():
+        if relative.startswith("lasagna_inputs/normal_") and not args.include_normal:
+            continue
         status = _fetch(data / relative, url, expected)
         print(f"{status} {relative}")
     for segment_id, expected in MESH_META_HASHES.items():

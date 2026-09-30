@@ -1,0 +1,54 @@
+{
+  "experiment": "FB15_frozen_surface_SDT_crest",
+  "status": "fixed_rule_selected_source_validation_plus_retrospective_stress_no_production_export",
+  "rule_source_sha256": "8e188eab36e2b992f65b851be2b25f703f09dea430683c68ad1fc22698dc3005",
+  "validation_candidate_manifest_sha256": "ff82e0ba2aa742dc9fe3670e0473e85309c70af99827e041fdd7a727b1ea74cc",
+  "ignored_artifact_sha256": {
+    "validation": "f17d024d0fc083b1080740eb6b4770aca69770c8e86aa6d5009d00c029881d3f",
+    "collection_bootstrap": "a17a8f3fc6a152a8cb2bab3efc409c5841b9e5226901ccfbc1336f53a7e748b6",
+    "retrospective_FB08_holdout_gate": "3178447eceaf63d220125ba26cfda0a9edbca8ea3331fc0429af3df0eff6827c"
+  },
+  "nonpilot_development": {
+    "pairs": 300,
+    "collections": 120,
+    "E1_signed_exact": 229,
+    "SDT_magnitude_exact": 267,
+    "SDT_with_E1_sign_signed_exact": 266,
+    "E1_wrong_magnitudes": 71,
+    "E1_wrong_magnitudes_flagged": 67,
+    "E1_correct_magnitudes_reviewed": 24,
+    "agreement_pairs": 209,
+    "agreement_E1_signed_exact": 205,
+    "FB08_gate_pairs": 74,
+    "FB08_gate_E1_signed_exact": 72,
+    "FB08_gate_plus_agreement_pairs": 64,
+    "FB08_gate_plus_agreement_E1_signed_exact": 64,
+    "FB08_gate_confidence_top_64_E1_signed_exact": 62,
+    "cluster_bootstrap_SDT_minus_E1_signed_accuracy_pp": 12.333333333333334,
+    "cluster_bootstrap_95_interval_pp": [5.592054184373978, 19.09090909090909]
+  },
+  "previously_seen_FB14_stress": {
+    "pairs": 90,
+    "collections": 2,
+    "E1_signed_exact": 69,
+    "SDT_magnitude_exact": 77,
+    "agreement_pairs": 64,
+    "agreement_E1_signed_exact": 60,
+    "FB08_gate_pairs": 13,
+    "FB08_gate_E1_signed_exact": 9,
+    "FB08_gate_plus_agreement_pairs": 7,
+    "FB08_gate_plus_agreement_E1_signed_exact": 7,
+    "FB08_gate_confidence_top_7_E1_signed_exact": 5
+  },
+  "retrospective_original_FB08_holdout_gate": {
+    "pairs": 207,
+    "collections": 51,
+    "E1_signed_exact": 190,
+    "agreement_pairs": 173,
+    "agreement_E1_signed_exact": 166,
+    "wrong_gate_edges_reviewed": 10,
+    "correct_gate_edges_reviewed": 24,
+    "gate_confidence_top_173_E1_signed_exact": 156,
+    "wrong_gate_edges_remaining": 7
+  }
+}

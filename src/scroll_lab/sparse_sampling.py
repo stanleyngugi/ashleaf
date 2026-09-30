@@ -131,6 +131,29 @@ class SparseRespoolSampler:
             return np.rint(result).clip(0, 255).astype(np.uint8)
         return result
 
+    def sample_integer(self, coordinates_zyx: np.ndarray) -> np.ndarray:
+        """Read exact integer voxels without requiring zero-weight neighbors.
+
+        Unlike trilinear sampling, a point on a brick boundary requires only
+        its own occupied brick. This is useful for a sparse nearest-voxel
+        pilot with a byte plan that intentionally excludes other neighbors.
+        """
+
+        coordinates = np.asarray(coordinates_zyx)
+        if coordinates.ndim != 2 or coordinates.shape[1] != 3:
+            raise ValueError("coordinates must have shape (N,3) in zyx order")
+        if not np.issubdtype(coordinates.dtype, np.number) or not np.isfinite(coordinates).all():
+            raise ValueError("coordinates must be finite numbers")
+        if not np.all(coordinates == np.rint(coordinates)):
+            raise ValueError("sample_integer requires integer coordinates")
+        integer = coordinates.astype(np.int64)
+        shape = np.asarray(self.index.array_shape, dtype=np.int64)
+        if np.any(integer < 0) or np.any(integer >= shape):
+            raise IndexError("sample coordinate outside resident-pool array")
+        if not len(integer):
+            return np.empty(0, dtype=np.uint8)
+        return self._gather_integer(integer).astype(np.uint8)
+
     def _gather_integer(self, integer_zyx: np.ndarray) -> np.ndarray:
         brick = np.asarray(self.index.brick_shape, dtype=np.int64)
         brick_index = np.floor_divide(integer_zyx, brick)

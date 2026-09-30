@@ -1,0 +1,54 @@
+{
+  "experiment": "FB16_retrospective_SDT_soft_graph",
+  "status": "negative_CPU_downstream_diagnostic_not_official_fitter_not_blind",
+  "protocol_freeze_sha256": "9e0191540f12ceb750bae806f0a48cc6e48132237a1db78dd32a1014041e5ab1",
+  "ignored_artifact_sha256": {
+    "fixed_graph": "664b028016e27a20be04f133764ecf27b4c2ff1f0f87068830510918f4ee4d17",
+    "posthoc_topology": "1858517231660a7a2afb404c2a175f241fee4b41ccb5fd7694276f6f41cf91fa",
+    "posthoc_oracle": "747f998e0436eb36bb91b17911fdf1899db5160445aeace7a571180bade1afa7",
+    "truth_blind_review_queue": "a2ca212765056064722d455354e8ee389fb73dbfd90d23b7f50a185e3d786846"
+  },
+  "population": {
+    "collections": 65,
+    "E1_edges": 1045,
+    "original_FB08_gate_edges": 207,
+    "SDT_flagged_gate_edges": 34,
+    "comparable_node_pairs_all_arms": 5117,
+    "possible_node_pairs_all_arms": 5811
+  },
+  "arms": {
+    "confidence_weight": {
+      "exact_pairs": 2222,
+      "absolute_error_sum": 4604
+    },
+    "SDT_disagreement_x0p25": {
+      "exact_pairs": 2213,
+      "absolute_error_sum": 4602,
+      "changed_assignment_collections": 2
+    },
+    "confidence_low_x0p25": {
+      "exact_pairs": 2210,
+      "absolute_error_sum": 4651,
+      "changed_assignment_collections": 3
+    },
+    "hash_null_x0p25": {
+      "exact_pairs": 2210,
+      "absolute_error_sum": 4675,
+      "changed_assignment_collections": 2
+    }
+  },
+  "posthoc_mechanism": {
+    "flagged_edges_in_cycles": 34,
+    "flagged_edges_baseline_rounded_solver_agrees_with_E1": 34,
+    "wrong_flagged_edges_baseline_rounded_solver_agrees_with_E1": 10,
+    "oracle_correct_10_flagged_wrong_exact_pairs": 2232,
+    "oracle_correct_10_flagged_wrong_absolute_error_sum": 4538
+  },
+  "review_queue": {
+    "rows": 34,
+    "magnitude_disagreement": 32,
+    "zero_crest_review": 2,
+    "truth_fields": 0,
+    "numeric_export_permitted": false
+  }
+}

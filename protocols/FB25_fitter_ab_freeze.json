@@ -1,0 +1,63 @@
+{
+  "calibration_window": [
+    8000,
+    9000
+  ],
+  "date": "2026-09-26",
+  "full_steps": 30000,
+  "index_sha256": {
+    "data/PHercParis4/lasagna_inputs/grad_mag_respool_g4_brick_coords.npy": "bfe74a188964bfa188e61ae7e55d32309d645f579b2c9d47066cbd3c9cd87a10",
+    "data/PHercParis4/lasagna_inputs/grad_mag_respool_g4_meta.json": "c2558e4e60fc9abfcbd4299f52d263a384c3a64b2243428f0cd8474c590a932b",
+    "data/PHercParis4/lasagna_inputs/grad_mag_respool_g4_table.npy": "90edae136224642c7aeee02939dc05911e4c4a97fdfcb7390de539feac180848",
+    "data/PHercParis4/lasagna_inputs/normal_respool_g4_brick_coords.npy": "66ac81cdda16a603e6ca9b35ec91a5fc44382b3025893629dbc0d3eb135dfa41",
+    "data/PHercParis4/lasagna_inputs/normal_respool_g4_meta.json": "9773923fee34f388cad2d9e457f157f16415792771eda0302b88928426025c54",
+    "data/PHercParis4/lasagna_inputs/normal_respool_g4_table.npy": "64465ea44666a0d55211ff131821c7c1612fdf0ded88d13e43ae7d5a285a75a6",
+    "data/PHercParis4/lasagna_inputs/surf_sdt_g1_index/brick_coords.npy": "eca27dff1e584eb7a2d36ed91f448434d54cc970c84502ebf219999c36e1c8b9",
+    "data/PHercParis4/lasagna_inputs/surf_sdt_g1_index/meta.json": "a9efeae369ee6d9ee023896333542e261cca0cc16a96f0430e7b345198935bc6",
+    "data/PHercParis4/lasagna_inputs/surf_sdt_g1_index/table.npy": "40d091aeb40618915ecbce92e4b8954d06a17d82d75dd8aedd10851a07fa6f7b"
+  },
+  "kind": "FB25_fitter_ab_protocol_freeze",
+  "max_within_tau_drop_per_seed": 0.01,
+  "minimum_mean_gain_vs_patch_and_confidence": 0.03,
+  "minimum_per_seed_gain": 0.0,
+  "numeric_export_permitted": false,
+  "patch_split_fraction": 0.2,
+  "patch_split_seed": 20260926,
+  "primary_metric": "spiralcheck heldout_aggregate.unseen.mean_sheet_consistency",
+  "primary_window": [
+    15000,
+    16000
+  ],
+  "replication_window": [
+    12000,
+    13000
+  ],
+  "same_count_z_bin_voxels": 128,
+  "seeds": [
+    17,
+    29
+  ],
+  "smoke_steps": 1500,
+  "source_commits": {
+    "spiralcheck": "d1b50e2957409a870225fb9f5dcc5e25f7a0f9da",
+    "villa": "c4902849470a2e4005c8492120007280f087d636",
+    "winding_ruler": "2d34dcb02dbfe7e8bce8d9c9c44285b434c08996"
+  },
+  "source_sha256": {
+    "docs/65_fb25_fitter_ab_protocol_2026-09-26.md": "e3c7082e0aac0b0700a237ca4bbda0056a12daa3d7f7dfce70b4edeaa0751b65",
+    "scripts/fb25_assess_fits.py": "cd0032219c5e8cfaaecd7bb94d2870bdfbc623be84a9c3f4a71a934dfccb4b06",
+    "scripts/fb25_build_arms.py": "ae5adce6cfd819f6a279fdf45e4b75b7e55c4d28952d510a2c8f73bfd9495af5",
+    "scripts/fb25_plan_ranges.py": "9d08333e843b6da1b4e6dccc5547ce7ed712246a7015b7ed3b34da7c53f1b7f5",
+    "scripts/fb25_prepare_candidates.py": "9e09b89060dbd347aae506e79c97712355cb3d8d042b9ca73f378499412ef2ca",
+    "scripts/fb25_run_fit.py": "2f355c30bff4ba91c362ec496bacce440c3d4fb39176e774f9d17006f3bee3d9",
+    "scripts/fb25_score_candidates.py": "9457c405b525ddd858188a519d5e2dfff464ce02b9749c37aec33a7038b6be5f",
+    "scripts/fb25_stage_datasets.py": "7a7e1dff5e7b2c70d3defdf8c8efc7cd658ef25193c5baa00033c3a3a29ca7a4",
+    "src/scroll_lab/constraint_gate.py": "f2ce1249f3ef926c5e772e3bf4029ad17292dbd9821c6f4682b914cfab60cf09",
+    "src/scroll_lab/fb25_assessment.py": "c631fb2fc565545976ecee236c939b32eaefc5e2636163a9aabaf7009a01c17c",
+    "src/scroll_lab/fb25_fitter_ab.py": "71c599abd378f6dddd96175ccb6267dd198dc309869ed0bc28aa6d7aa1ff5110",
+    "src/scroll_lab/normal_alignment.py": "176e7c2dd4208cbf9d69ee686ab51a7a462e4ba1cbd03eb6484f819461c194f3",
+    "src/scroll_lab/sdt_crossings.py": "8e188eab36e2b992f65b851be2b25f703f09dea430683c68ad1fc22698dc3005",
+    "src/scroll_lab/sparse_e1.py": "b797260984b9ce565134723e96d48c82e616ebcb6a31a766e47ad3c3bfd2791f"
+  },
+  "status": "frozen_before_target_v3_candidate_generation_or_fitter_scoring"
+}

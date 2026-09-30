@@ -10,7 +10,7 @@ This demo turns the FrameBridge coordinate and sparse-I/O contract into a check 
 
 - Python 3.10+ and `numpy`; the optional `benchmark` installation also supplies the dependencies for later tests.
 - Internet access to the public Paris 4 metadata endpoints.
-- Approximately 4.5 MiB of index downloads, plus tiny JSON files. The planned 333.8 MiB one-mesh CT payload is **not downloaded** by these commands.
+- Approximately 4.1 MiB of gradient index/metadata downloads, plus tiny JSON files. The default fetch intentionally omits the paired normal-field indexes; deeper FB08/FB09/FB14 runs use `--include-normal`. The planned 333.8 MiB one-mesh CT payload is **not downloaded** by these commands.
 - CPU only; on this Windows machine, metadata fetch and range planning completed in under a minute. Network time varies.
 
 ## Native Windows PowerShell
@@ -65,6 +65,18 @@ The metadata fetch reports `verified` or `downloaded` for each file. Both status
 Windows prints backslashes in the output path. The generated ignored JSON records source hashes, `table_coords_exact_inverse: true`, the 2.4→9.6→38.4 µm coordinate contract, one-mesh region, and 717 inclusive HTTP ranges. A failure in the index geometry or inverse mapping raises an error instead of quietly producing a plan.
 
 The script plans conservatively from the public mesh `meta.json` bounding box; no mesh TIFF coordinates or CT bricks are read. The exact seven-ray 19,999/19,999 support measurement in FB03 requires those larger inputs and is a separately recorded experiment, **not** reproduced by this quickstart.
+
+## Verified Windows quickstart — 2026-09-30
+
+The documented editable install was run in a newly created `.venv-win` with
+the `benchmark` extra. `scripts/fetch_framebridge_metadata.py` verified the
+umbilicus, group-4 metadata/indexes, and all nine pinned mesh metadata files by
+their expected SHA-256 digests. The planner then completed on the documented
+single mesh and produced **10,683 occupied bricks**, **11,520 logical bricks**,
+**350,060,544 planned payload bytes**, and **717 ranges**. The data files were
+already present and hash-verified on this workstation, so this confirms the
+installed quickstart and its integrity checks, not a fresh network download.
+No CT bricks or mesh coordinate TIFFs were read.
 
 ## Compact evidence integrity check
 

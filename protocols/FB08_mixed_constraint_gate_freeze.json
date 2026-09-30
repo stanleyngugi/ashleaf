@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "FB08_mixed_constraint_gate_protocol_freeze",
+  "status": "frozen_before_holdout_E1_scoring",
+  "candidate_manifest_sha256": "2cfdd117e5e39096015eeadb94cbe3ac72341c53d25eaf1badcfa275a4dcae3c",
+  "ray_plan_sha256": "16d90c62276dbb645d5740a999d501a65e0952ec3c02a34ac57ffd02b791c4cc",
+  "normal_features_sha256": "f5e6824d9bb10db8c7f58ba385e73fc100b9fcbed5011d10cca659ed9904e917",
+  "spatial_buffer_sha256": "7c6de3b4d5356ef0228e3dd8e14d70da86b74b99b87adce93a48eb437cec815b",
+  "gate_source_sha256": "f2ce1249f3ef926c5e772e3bf4029ad17292dbd9821c6f4682b914cfab60cf09",
+  "development_e1_sha256": "1e677b4a0f3a754a19590fd81235425778371eeebfa2a74f7b49bdbaaa810efb",
+  "development_comparison_sha256": "b4715d9ec1ee81516bde2f11075f9efb7085da102faaaafaeaca39e1d2126ab59",
+  "ct_spot_check_sha256": "652de3d423e31ddcdb7707ff7db3a81c66d7b15ae0b3ad99b664f77110a56447",
+  "primary_holdout_subset": "candidate IDs eligible under coordinate-only 16-working-voxel same-arm development buffer",
+  "primary_rule": {
+    "estimator": "frozen E1 v1_5 on sparse group-4 grad_mag",
+    "require_answered": true,
+    "require_nonzero_predicted_dw": true,
+    "require_both_endpoint_normals_valid": true,
+    "minimum_absolute_chord_normal_dot_at_both_endpoints": 0.75,
+    "minimum_e1_confidence": 0.75,
+    "registration_verified_for_export": false
+  },
+  "secondary_rule": {
+    "minimum_absolute_chord_normal_dot_at_both_endpoints": 0.50,
+    "minimum_e1_confidence": 0.75,
+    "purpose": "coverage/false-accept sensitivity, not an alternate primary result"
+  },
+  "comparators": [
+    "E1 answered and nonzero with no gate",
+    "E1 answered and nonzero with confidence >= 0.75",
+    "radial-fraction >= 0.75 with E1 answered and nonzero",
+    "normal-dot >= 0.75 with E1 answered and nonzero, no confidence condition",
+    "radial displacement magnitude classifier trained on development collections only",
+    "chord length magnitude classifier trained on development collections only"
+  ],
+  "geometry_baseline_cutoffs_working_voxels": {
+    "abs_radius_delta": [31.566122279429734, 78.30136416921982],
+    "chord_length": [32.50180900499666, 74.06995150381539]
+  },
+  "matched_slice": {
+    "z_separation_working_voxels_lt": 1.0,
+    "chord_length_working_voxels_min_inclusive": 10.0,
+    "chord_length_working_voxels_max_inclusive": 50.0
+  },
+  "report": [
+    "relative-arm accepted count, fraction, exact signed precision, per-class results, and per-collection variability",
+    "same-winding-arm nonzero false accepts and false-accept fraction, full and spatially buffered",
+    "all primary and comparator results again in the matched geometry slice",
+    "cluster bootstrap by collection, with pair counts explicitly marked as dependent",
+    "reason-code counts and stratified wrong-accepted examples",
+    "registration and source-population limitations; no fitter-benefit claim without controlled fitter run"
+  ],
+  "forbidden_after_holdout": [
+    "change primary thresholds or spatial buffer to improve this holdout result",
+    "reinterpret development-selected rule as prospectively externally preregistered",
+    "pool relative and same source arms into one accuracy headline",
+    "export accepted production constraints before independent registration verification"
+  ]
+}

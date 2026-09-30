@@ -54,6 +54,16 @@ class SparseSamplingTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "absent from the acquisition"):
             sampler.sample(np.asarray([[0.0, 0.0, 0.0]]))
 
+    def test_integer_sample_needs_only_its_own_brick(self):
+        dense, sampler = self._sampler()
+        # The adjacent brick is unavailable, but an exact integer voxel in
+        # the retained brick must still be readable.
+        sampler.row_remap[sampler.index.table[0, 0, 1]] = 0
+        got = sampler.sample_integer(np.asarray([[0, 0, 1]], dtype=float))
+        np.testing.assert_array_equal(got, [dense[0, 0, 1]])
+        with self.assertRaisesRegex(ValueError, "integer coordinates"):
+            sampler.sample_integer(np.asarray([[0, 0, 1.25]]))
+
     def test_out_of_bounds_rejected(self):
         _, sampler = self._sampler()
         with self.assertRaises(IndexError):
